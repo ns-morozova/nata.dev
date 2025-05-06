@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home: React.FC = () => {
+const Banner: React.FC = () => {
     return (
         <div>
             <div
@@ -22,4 +22,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default Home;
+export default Banner;
