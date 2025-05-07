@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-scroll';
+import { Link } from 'react-router-dom';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -8,10 +8,10 @@ const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const menuItems = [
-        { to: "ideology", label: "lalala" },
-        { to: "tokenomics", label: "lalala" },
-        { to: "roadmap", label: "lalala" },
-        { to: "apps", label: "lalala" },
+        { to: "/", label: "Главная" },
+        { to: "/cases", label: "Кейсы" },
+        { to: "/cases", label: "Кейсы" },
+        { to: "/cases", label: "Кейсы" },
     ];
 
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50">
-            <div className="relative mx-auto">
+            <div className="relative mx-auto 2xl:max-w-7xl">
                 <nav
                     aria-label="Global"
                     className="relative mx-auto bg-gray-200/10 backdrop-blur-md shadow-lg overflow-hidden"
@@ -46,9 +46,7 @@ const Navbar: React.FC = () => {
                     <div className="relative flex items-center justify-end px-3 py-3 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
                         <div className="absolute left-1.5 flex lg:flex-1">
                             <Link
-                                to="home"
-                                smooth={true}
-                                duration={600}
+                                to="/"
                                 className="-m-1.5 p-1.5 cursor-pointer"
                             >
                                 <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_15px] hover:scale-105 hover:shadow-teal-300 transition-all duration-500 ease-out overflow-hidden">
@@ -77,8 +75,6 @@ const Navbar: React.FC = () => {
                                 <Link
                                     key={item.to}
                                     to={item.to}
-                                    smooth={true}
-                                    duration={600}
                                     className="relative group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
                                 >
                                     {item.label}
@@ -111,8 +107,6 @@ const Navbar: React.FC = () => {
                                     <Link
                                         key={item.to}
                                         to={item.to}
-                                        smooth={true}
-                                        duration={600}
                                         className="relative -mx-3 w-max group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
