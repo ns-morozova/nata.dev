@@ -6,7 +6,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('ru');
 
     const menuItems = [
         { to: "ideology", label: "lalala" },
@@ -16,11 +15,6 @@ const Navbar: React.FC = () => {
     ];
 
     const dropdownRef = useRef<HTMLDivElement>(null);
-
-    const handleLanguageChange = (language: string) => {
-        setCurrentLanguage(language);
-        setIsOpen(false);
-    };
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -40,20 +34,13 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 w-full px-4 lg:px-8 z-50">
-            <div className="relative mx-auto max-w-7xl">
+        <header className="fixed top-0 left-0 w-full z-50">
+            <div className="relative mx-auto">
                 <nav
                     aria-label="Global"
-                    className="relative mx-auto mt-4 rounded-full shadow-lg lg:mt-6 overflow-hidden"
+                    className="relative mx-auto bg-gray-200/10 backdrop-blur-md shadow-lg overflow-hidden"
                 >
-                    <div
-                        style={{
-                            position: 'absolute',
-                            inset: 0,
-                            background: 'linear-gradient(90deg, #AF0092, #14B8A6)',
-                            opacity: 1,
-                            zIndex: -1,
-                        }}
+                    <div className=""
                     ></div>
 
                     <div className="relative flex items-center justify-end px-3 py-3 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
@@ -102,50 +89,6 @@ const Navbar: React.FC = () => {
                     </div>
                     
                 </nav>
-                
-                <div
-                    className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-4 lg:top-1/2 lg:-translate-y-1/2"
-                    ref={dropdownRef}
-                >
-                    <div className="lang-switcher relative w-max">
-                        <div className="relative px-0.5">
-                            <button
-                                className="custom-selector m-0.5 ml-0 bg-[#141414] rounded px-3 w-full text-left outline-none focus:outline-none"
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    setIsOpen(!isOpen);
-                                }}
-                            >
-                                {currentLanguage === 'en' ? 'EN' : 'RU'}
-                            </button>
-                            <div
-                                className="absolute inset-0 bg-gradient-to-r from-[#AF0092] to-teal-900 rounded -z-10"
-                            ></div>
-                        </div>
-                        {isOpen && (
-                            <div className="absolute top-full right-0 w-20 bg-white rounded shadow-lg mt-2 py-2">
-                                <button
-                                    className="block w-full mb-1 text-black hover:text-teal-700 text-center"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        handleLanguageChange('en');
-                                    }}
-                                >
-                                    EN
-                                </button>
-                                <button
-                                    className="block w-full text-black hover:text-teal-700 text-center"
-                                    onClick={(e) => {
-                                        e.stopPropagation();
-                                        handleLanguageChange('ru');
-                                    }}
-                                >
-                                    RU
-                                </button>
-                            </div>
-                        )}
-                    </div>
-                </div>
             </div>
 
             <Dialog open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="lg:hidden">
@@ -178,39 +121,6 @@ const Navbar: React.FC = () => {
                                     </Link>
                                 ))}
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="absolute bottom-6 left-6">
-                        <div className="lang-switcher relative w-max">
-                            <div className="relative px-0.5">
-                                <button
-                                    className="custom-selector m-0.5 ml-0 bg-[#141414] rounded px-5 w-full text-left outline-none focus:outline-none"
-                                    onClick={() => setIsOpen(!isOpen)}
-                                >
-                                    {currentLanguage === 'en' ? 'EN' : 'RU'}
-                                </button>
-                                <div
-                                    className="absolute inset-0 bg-gradient-to-r from-[#AF0092] to-[#14B8A6] rounded -z-10"
-                                ></div>
-                            </div>
-                            
-                            {isOpen && (
-                                <div className="absolute bottom-full left-0 w-full bg-gradient-to-b from-[#AF0092] to-[#14B8A6] rounded shadow-lg mb-2 py-2 z-10">
-                                    <button
-                                        className="block w-full mb-1 hover:text-gray-100"
-                                        onClick={() => handleLanguageChange('en')}
-                                    >
-                                        EN
-                                    </button>
-                                    <button
-                                        className="block w-full hover:text-gray-100"
-                                        onClick={() => handleLanguageChange('ru')}
-                                    >
-                                        RU
-                                    </button>
-                                </div>
-                            )}
                         </div>
                     </div>
 
