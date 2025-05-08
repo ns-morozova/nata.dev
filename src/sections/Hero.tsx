@@ -8,8 +8,10 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 w-full h-full bg-black/60 z-0"></div>
             <div className="max-w-7xl mx-auto py-56">
                 <div className="relative flex flex-col">
-                    <h1 className="text-6xl font-bold text-white uppercase">Developer</h1>
-                    <p className="text-xl text-white">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope.</p>
+                    <h1 className="text-6xl font-bold uppercase">
+                        Frontend Developer
+                    </h1>
+                    <p className="text-xl">There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope.</p>
                     <button className="bg-white w-max text-black px-4 py-2 mt-4 rounded">Learn More</button>
             </div>
          </div>
