@@ -14,7 +14,7 @@ const CasesPreview: React.FC = () => {
             image: '/images/cardpreview-academy.png',
             title: 'Beauty Academy',
             category: 'Educational',
-            description: 'Многостраничный сайт для продажи курсов и обучений в бьюти-индустрии',
+            description: 'Многостраничный сайт для продажи курсов и обучений в сфере бьюти-индустрии',
             link: '/cases/academy',
         },
         {
@@ -44,7 +44,7 @@ const CasesPreview: React.FC = () => {
                 </div>
                 <a
                     href='/cases'
-                    className="group inline-flex items-center text-sm font-medium transition-all duration-500 group-hover:text-teal-300"
+                    className="group inline-flex items-center text-sm font-medium transition-all duration-500 group-hover:text-teal-300 md:text-base"
                 >
                     <span className="relative">
                         Посмотреть все проекты
