@@ -4,7 +4,7 @@ import { CasePreview } from '../components/Cards';
 const CasesPreview: React.FC = () => {
     const projects = [
         {
-            image: '/images/cardpreview-shmoneloops.jpg',
+            image: '/images/unnamed.jpg',
             title: 'ShmoneLoops',
             category: 'Landing',
             description: 'Современный интерактивный лендинг с возможностью записи в лист ожидания',
