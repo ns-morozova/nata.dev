@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -15,28 +16,29 @@ const Navbar: React.FC = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50">
-            <div className="relative mx-auto 2xl:max-w-7xl">
+            <div className="relative mx-auto 2xl:max-w-7xl 2xl:rounded-b-3xl overflow-hidden">
                 <nav
                     aria-label="Global"
-                    className="relative mx-auto bg-gray-200/10 backdrop-blur-md shadow-lg overflow-hidden"
+                    className="relative mx-auto bg-gray-200/20 backdrop-blur-md shadow-lg overflow-hidden"
                 >
                     <div className=""
                     ></div>
 
                     <div className="relative flex items-center justify-end px-3 py-3 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
                         <div className="absolute left-1.5 flex lg:flex-1">
-                            <Link
-                                to="/"
+                            <ScrollLink
+                                to="home"
+                                smooth={true}
+                                duration={1000}
                                 className="-m-1.5 p-1.5 cursor-pointer"
                             >
-                                <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_15px] hover:scale-105 hover:shadow-teal-300 transition-all duration-500 ease-out overflow-hidden">
+                                <div className="w-10 md:w-11 lg:w-13 h-auto ">
                                     <img
-                                        alt="logo"
-                                        src="/nata.dev/images/logo.png"
-                                        className="w-full h-auto object-cover"
+                                        src="/nata.dev/favicon-developer.svg"
+                                        className="w-full h-full object-cover"
                                     />
                                 </div>
-                            </Link>
+                            </ScrollLink>
                         </div>
 
                         <div className="flex lg:hidden">
@@ -98,11 +100,11 @@ const Navbar: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="w-32 h-auto mx-auto mt-20 rounded-full hover:rotate-12 hover:shadow-[0_0_50px] hover:scale-105 hover:shadow-teal-600 transition-all duration-500 ease-out overflow-hidden">
+                    <div className="w-32 h-auto mx-auto mt-44">
                         <img
                             alt="logo"
-                            src="/nata.dev/images/logo.png"
-                            className="w-full h-auto object-cover"
+                            src="/nata.dev/favicon-developer.svg"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </DialogPanel>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner: React.FC = () => {
     return (
-        <div>
+        <section>
             <div
                 className="relative bg-cover bg-center bg-no-repeat py-56"
                 style={{ backgroundImage: "url('https://avatars.mds.yandex.net/i?id=f747ba761e6132a4858ecb54a7aac605_l-5228069-images-thumbs&n=13')" }}
@@ -18,7 +18,7 @@ const Banner: React.FC = () => {
                     <div className="w-1/2"></div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

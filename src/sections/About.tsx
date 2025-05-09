@@ -3,7 +3,7 @@ import React from 'react';
 const About: React.FC = () => {
 
     return (
-        <div className="px-4 py-8 md:px-8 md:py-16">
+        <section className="px-4 py-8 md:px-8 md:py-16">
             <div className="relative max-w-7xl mx-auto">
                 <div className="flex flex-col gap-10 md:gap-16">
                     <div className="md:max-w-2/3">
@@ -65,7 +65,7 @@ const About: React.FC = () => {
 
                             <a
                                 href="/"
-                                className="group inline-flex items-center text-sm font-medium transition-all duration-500 md:text-base"
+                                className="group mt-7 inline-flex items-center text-sm font-medium transition-all duration-500 md:text-base md:mt-auto"
                             >
                                 <span className="relative">
                                     Ознакомиться со стеком технологий
@@ -90,7 +90,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
