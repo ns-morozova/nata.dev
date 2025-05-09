@@ -16,7 +16,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({
     link,
 }) => {
     return (
-        <div className="group relative rounded-2xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl overflow-hidden">
+        <div className="group relative rounded-2xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl overflow-hidden z-10">
             {/* Градиентные эффекты */}
             <div className="absolute -right-12 -top-12 z-10 h-24 w-24 rounded-full bg-gradient-to-br from-cyan-200 to-cyan-400 opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-80"></div>
             <div className="absolute -left-12 -bottom-12 z-10 h-24 w-24 rounded-full bg-gradient-to-tr from-slate-300 to-slate-500 opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-80"></div>
@@ -35,7 +35,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({
 
             {/* Категория */}
             <div className="absolute top-4 left-4 md:left-6">
-                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-cyan-600 to-cyan-500 px-3 py-1 text-xs font-medium text-white shadow-sm transition-transform duration-500 group-hover:scale-105">
+                <div className="inline-flex items-center rounded-full bg-gradient-to-r from-cyan-700 to-cyan-400 px-3 py-1 text-xs font-medium text-white shadow-sm transition-transform duration-500 group-hover:scale-105">
                     {category}
                 </div>
             </div>
@@ -63,7 +63,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({
                             viewBox="0 0 24 24"
                             strokeWidth={1.5}
                             stroke="currentColor"
-                            className="ml-1 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
+                            className="ml-1 mt-0.5 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
                         >
                             <path
                                 strokeLinecap="round"

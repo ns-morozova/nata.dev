@@ -33,9 +33,9 @@ const About: React.FC = () => {
                                 <h3 className="mb-4 font-medium text-xl md:text-2xl">
                                     Анкета
                                 </h3>
-                                <div className="w-max grid grid-cols-2 gap-x-6 gap-y-3 text-sm md:text-base md:gap-x-10">
-                                    <p>Должность:</p>
-                                    <p>Frontend-разработчик <br></br> (junior+)</p>
+                                <div className="w-max grid grid-cols-2 gap-x-6 gap-y-2 text-sm md:text-base md:gap-x-10">
+                                    <p>Специальность:</p>
+                                    <p>Frontend-разработчик</p>
                                     <p>Возраст:</p>
                                     <p>25 лет</p>
                                     <p>Город проживания:</p>
@@ -44,7 +44,7 @@ const About: React.FC = () => {
                                     <p>Оконченное высшее</p>
                                 </div>
                                 <div
-                                    className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-cyan-600 to-cyan-300 md:h-0.5 transition-all duration-2000 ease-out"
+                                    className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-cyan-700 to-cyan-400 md:h-0.5 transition-all duration-2000 ease-out"
                                 ></div>
                             </div>
 
@@ -59,7 +59,7 @@ const About: React.FC = () => {
                                     За это время удалось поработать с проектами для Израиля, Норвегии и России, а также принять участие в разработке сервиса маркировки для стран СНГ
                                 </p>
                                 <div
-                                    className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-cyan-600 to-cyan-300 md:h-0.5 transition-all duration-2000 ease-out"
+                                    className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-cyan-700 to-cyan-400 md:h-0.5 transition-all duration-2000 ease-out"
                                 ></div>
                             </div>
 
@@ -76,7 +76,7 @@ const About: React.FC = () => {
                                     viewBox="0 0 24 24"
                                     strokeWidth={1.5}
                                     stroke="currentColor"
-                                    className="ml-1 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
+                                    className="ml-1 mt-0.5 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
                                 >
                                     <path
                                         strokeLinecap="round"
