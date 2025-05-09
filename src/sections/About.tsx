@@ -24,7 +24,7 @@ const About: React.FC = () => {
                         <div className="aspect-5/6 max-h-[550px] rounded-3xl md:w-1/2 overflow-hidden">
                             <img
                                 alt=""
-                                src="/images/me.JPG"
+                                src="/nata.dev/images/me.JPG"
                                 className="w-full h-full object-cover object-[center_35%]"
                             />
                         </div>

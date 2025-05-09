@@ -4,21 +4,21 @@ import { CasePreview } from '../components/Cards';
 const CasesPreview: React.FC = () => {
     const projects = [
         {
-            image: '/images/unnamed.jpg',
+            image: '/nata.dev/images/unnamed.jpg',
             title: 'ShmoneLoops',
             category: 'Landing',
             description: 'Современный интерактивный лендинг с возможностью записи в лист ожидания',
             link: '/cases/shmoneloops',
         },
         {
-            image: '/images/cardpreview-academy.png',
+            image: '/nata.dev/images/cardpreview-academy.png',
             title: 'Beauty Academy',
             category: 'Educational',
             description: 'Многостраничный сайт для продажи курсов и обучений в сфере бьюти-индустрии',
             link: '/cases/academy',
         },
         {
-            image: '/images/cardpreview-chicscoin.jpg',
+            image: '/nata.dev/images/cardpreview-chicscoin.jpg',
             title: 'Chicscoin',
             category: 'Landing',
             description: 'Мультиязычный лендинг с самостоятельно разработанным дизайном',

@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                                 <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_15px] hover:scale-105 hover:shadow-teal-300 transition-all duration-500 ease-out overflow-hidden">
                                     <img
                                         alt="logo"
-                                        src="/images/logo.png"
+                                        src="/nata.dev/images/logo.png"
                                         className="w-full h-auto object-cover"
                                     />
                                 </div>
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
                     <div className="w-32 h-auto mx-auto mt-20 rounded-full hover:rotate-12 hover:shadow-[0_0_50px] hover:scale-105 hover:shadow-teal-600 transition-all duration-500 ease-out overflow-hidden">
                         <img
                             alt="logo"
-                            src="/images/logo.png"
+                            src="/nata.dev/images/logo.png"
                             className="w-full h-auto object-cover"
                         />
                     </div>
