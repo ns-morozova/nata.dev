@@ -7,10 +7,10 @@ const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const menuItems = [
-        { to: "/", label: "Главная" },
-        { to: "/cases", label: "Кейсы" },
-        { to: "/cases", label: "Кейсы" },
-        { to: "/cases", label: "Кейсы" },
+        { id: 1, to: "/", label: "Главная" },
+        { id: 2, to: "/cases", label: "Кейсы" },
+        { id: 3, to: "/cases", label: "Кейсы" },
+        { id: 4, to: "/cases", label: "Кейсы" },
     ];
 
     return (
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                                 <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_15px] hover:scale-105 hover:shadow-teal-300 transition-all duration-500 ease-out overflow-hidden">
                                     <img
                                         alt="logo"
-                                        src="/images/chiks-coin2.png"
+                                        src="/images/logo.png"
                                         className="w-full h-auto object-cover"
                                     />
                                 </div>
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
                         <div className="hidden text-base font-medium lg:flex lg:gap-x-14 xl:gap-x-20">
                             {menuItems.map((item) => (
                                 <Link
-                                    key={item.to}
+                                    key={item.id}
                                     to={item.to}
                                     className="relative group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
                                 >
@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
                             <div className="font-medium text-base flex flex-col gap-6 py-6">
                                 {menuItems.map((item) => (
                                     <Link
-                                        key={item.to}
+                                        key={item.id}
                                         to={item.to}
                                         className="relative -mx-3 w-max group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
                                         onClick={() => setMobileMenuOpen(false)}
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
                     <div className="w-32 h-auto mx-auto mt-20 rounded-full hover:rotate-12 hover:shadow-[0_0_50px] hover:scale-105 hover:shadow-teal-600 transition-all duration-500 ease-out overflow-hidden">
                         <img
                             alt="logo"
-                            src="/images/chiks-coin2.png"
+                            src="/images/logo.png"
                             className="w-full h-auto object-cover"
                         />
                     </div>
