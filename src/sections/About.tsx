@@ -1,4 +1,5 @@
 import React from 'react';
+import { SectionTitle } from '../components/Ui';
 import { Button } from '../components/Ui';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
@@ -7,9 +8,9 @@ const About: React.FC = () => {
     return (
         <section className="px-4 py-8 md:px-8 md:py-16">
             <div className="relative max-w-7xl mx-auto">
-                <div className="flex flex-col gap-10 md:gap-16">
+                <div className="flex flex-col gap-10 lg:gap-16">
                     <div className="md:max-w-2/3">
-                        <h2 className="mb-6 md:mb-10 font-medium text-5xl uppercase">Обо мне</h2>
+                        <SectionTitle className="mb-5 md:mb-7">Обо мне</SectionTitle>
                         <div className="flex flex-col gap-5 text-sm md:text-base">
                             <p>
                                 Всем привет! Меня зовут Наташа, я фронтенд-разработчик.
@@ -22,7 +23,7 @@ const About: React.FC = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-6 md:flex-row md:justify-between md:gap-16">
+                    <div className="flex flex-col gap-6 md:flex-row md:justify-between md:gap-10 lg:gap-16">
                         <div className="aspect-5/6 max-h-[550px] rounded-3xl md:w-1/2 overflow-hidden">
                             <img
                                 alt=""
@@ -35,7 +36,7 @@ const About: React.FC = () => {
                                 <h3 className="mb-4 font-medium text-xl md:text-2xl">
                                     Анкета
                                 </h3>
-                                <div className="w-max grid grid-cols-2 gap-x-6 gap-y-2 text-sm md:text-base md:gap-x-10">
+                                <div className="w-max grid grid-cols-2 gap-x-6 gap-y-2 text-sm md:text-base md:gap-x-4 lg:gap-x-10">
                                     <p>Специальность:</p>
                                     <p>Frontend-разработчик</p>
                                     <p>Возраст:</p>
