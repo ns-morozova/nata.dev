@@ -21,7 +21,7 @@ const CasesPreview: React.FC = () => {
             image: '/nata.dev/images/cardpreview-chicscoin.jpg',
             title: 'Chicscoin',
             category: 'Landing',
-            description: 'Мультиязычный лендинг с самостоятельно разработанным дизайном',
+            description: 'Мультиязычный лендинг с самостоятельно разработанным дизайном и базовой анимацией',
             link: '/cases/chicscoin',
         },
     ];

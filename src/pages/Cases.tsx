@@ -2,7 +2,7 @@ import React from 'react';
 
 const Cases: React.FC = () => {
     return (
-        <div>
+        <div className="pt-24">
             <h2 className="text-7xl">Тут будут мои кейсы</h2>
         </div>
     );

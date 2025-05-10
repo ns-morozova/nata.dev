@@ -16,18 +16,6 @@ import { VscVscodeInsiders } from "react-icons/vsc"
 const Stack: React.FC = () => {
     const stack = [
         {
-            name: 'CSS3',
-            description:
-                'Адаптивность, Flexbox, Grid',
-            icon: IoLogoCss3,
-        },
-        {
-            name: 'Tailwind CSS',
-            description:
-                'Быстрая вёрстка через утилиты',
-            icon: RiTailwindCssFill,
-        },
-        {
             name: 'HTML5',
             description:
                 'Семантическая разметка',
@@ -38,6 +26,18 @@ const Stack: React.FC = () => {
             description:
                 'Динамика и интерактив',
             icon: IoLogoJavascript,
+        },
+        {
+            name: 'CSS3',
+            description:
+                'Адаптивность, Flexbox, Grid',
+            icon: IoLogoCss3,
+        },
+        {
+            name: 'Tailwind CSS',
+            description:
+                'Быстрая вёрстка через утилиты',
+            icon: RiTailwindCssFill,
         },
         {
             name: 'React',
@@ -93,7 +93,7 @@ const Stack: React.FC = () => {
     ]
 
     return (
-        <section className="px-4 py-8 lg:px-8 md:py-16">
+        <section id="stack" className="px-4 py-8 lg:px-8 md:py-16">
             <div className="max-w-7xl mx-auto">
                 <h2 className="mb-10 font-medium text-5xl uppercase">Инструменты разработки</h2>
                 <div className="mb-10 md:mb-16">

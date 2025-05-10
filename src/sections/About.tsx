@@ -1,7 +1,9 @@
 import React from 'react';
+import { Button } from '../components/Ui';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 const About: React.FC = () => {
-
     return (
         <section className="px-4 py-8 md:px-8 md:py-16">
             <div className="relative max-w-7xl mx-auto">
@@ -43,9 +45,6 @@ const About: React.FC = () => {
                                     <p>Образование:</p>
                                     <p>Оконченное высшее</p>
                                 </div>
-                                <div
-                                    className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-cyan-700 to-cyan-400 md:h-0.5 transition-all duration-2000 ease-out"
-                                ></div>
                             </div>
 
                             <div className="relative pb-6 md:pb-8">
@@ -58,33 +57,21 @@ const About: React.FC = () => {
                                 <p className="text-sm md:text-base">
                                     За это время удалось поработать с проектами для Израиля, Норвегии и России, а также принять участие в разработке сервиса маркировки для стран СНГ
                                 </p>
-                                <div
-                                    className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-cyan-700 to-cyan-400 md:h-0.5 transition-all duration-2000 ease-out"
-                                ></div>
                             </div>
 
-                            <a
-                                href="/"
-                                className="group mt-7 inline-flex items-center text-sm font-medium transition-all duration-500 md:text-base md:mt-auto"
-                            >
-                                <span className="relative">
-                                    Ознакомиться со стеком технологий
-                                </span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={1.5}
-                                    stroke="currentColor"
-                                    className="ml-1 mt-0.5 h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                                    />
-                                </svg>
-                            </a>
+                            <div className="flex gap-5 md:mt-auto">
+                                <Link to="/services">
+                                    <Button type="outline" label="услуги" className="max-w-max" />
+                                </Link>
+
+                                <Link to="/cases">
+                                    <Button type="outline" label="кейсы" className="max-w-max" />
+                                </Link>
+
+                                <ScrollLink to="stack" smooth={true} duration={1000}>
+                                    <Button type="outline" label="стек" className="max-w-max" />
+                                </ScrollLink>
+                            </div>
 
                         </div>
                     </div>

@@ -9,8 +9,8 @@ const Navbar: React.FC = () => {
 
     const menuItems = [
         { id: 1, to: "/", label: "Главная" },
+        { id: 3, to: "/services", label: "Услуги" },
         { id: 2, to: "/cases", label: "Кейсы" },
-        { id: 3, to: "/cases", label: "Кейсы" },
         { id: 4, to: "/cases", label: "Кейсы" },
     ];
 
