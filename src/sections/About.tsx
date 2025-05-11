@@ -7,7 +7,7 @@ import { Link as ScrollLink } from 'react-scroll';
 const About: React.FC = () => {
     return (
         <section className="px-4 py-8 md:px-8 md:py-16">
-            <div className="relative max-w-7xl mx-auto">
+            <div className="relative max-w-7xl mx-auto z-10">
                 <div className="flex flex-col gap-10 lg:gap-16">
                     <div className="md:max-w-2/3">
                         <SectionTitle className="mb-5 md:mb-7">Обо мне</SectionTitle>
