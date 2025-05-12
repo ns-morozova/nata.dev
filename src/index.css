@@ -35,6 +35,18 @@ button {
   transition: border-color 0.25s;
 }
 
+/* Стили для стрелок Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+    color: #cccccc;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     background-color: #ffffff;
