@@ -14,6 +14,9 @@ import { SiWebpack } from "react-icons/si";
 import { RxFigmaLogo } from "react-icons/rx";
 import { VscVscodeInsiders } from "react-icons/vsc";
 
+import { FaLaravel } from "react-icons/fa";
+import { SiFilament } from "react-icons/si";
+
 const Stack: React.FC = () => {
     const stack = [
         {
@@ -98,7 +101,7 @@ const Stack: React.FC = () => {
             <div className="max-w-7xl mx-auto">
                 <SectionTitle className="mb-10 md:mb-12">Инструменты разработки</SectionTitle>
                 <div className="mb-10 md:mb-16">
-                    <h3 className="mb-6 font-medium text lg md:text-xl">Основной стек</h3>
+                    <h3 className="mb-6 font-medium text-lg md:text-xl">Основной стек</h3>
                     <div className="grid grid-cols-2 gap-y-6 md:grid-cols-3 md:gap-y-10 md:gap-x-6 lg:gap-x-10">
                         {stack.map((item) => (
                             <div key={item.name} className="flex items-center gap-3 lg:gap-5">
@@ -114,12 +117,12 @@ const Stack: React.FC = () => {
                     </div>
                 </div>
 
-                <div>
-                    <h3 className="mb-6 font-medium text lg md:text-xl">Инструменты и прочее</h3>
+                <div className="mb-10 md:mb-16">
+                    <h3 className="mb-6 font-medium text-lg md:text-xl">Инструменты и прочее</h3>
                     <div className="grid grid-cols-2 gap-y-6 md:grid-cols-3 md:gap-y-10 md:gap-x-6 lg:gap-x-10">
                         {tools.map((item) => (
                             <div key={item.name} className="flex items-center gap-3 lg:gap-5">
-                                <div className="flex flex-shrink-0 size-13 items-center justify-center rounded-lg bg-gradient-to-r from-amber-700 to-amber-400 lg:size-10">
+                                <div className="flex flex-shrink-0 size-13 items-center justify-center rounded-lg bg-gradient-to-r from-green-800 to-green-400 lg:size-10">
                                     <item.icon aria-hidden="true" className="size-6 text-white" />
                                 </div>
                                 <div>
@@ -129,6 +132,37 @@ const Stack: React.FC = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div>
+                    <h3 className="mb-6 font-medium text-lg md:text-xl">Дополнительно</h3>
+                    <div className="grid sm:grid-cols-2">
+                        <div className="flex gap-4 lg:gap-7">
+                            <div className="h-full flex flex-col gap-3.5 md:gap-3.5">
+                                {/* <div className="flex flex-shrink-0 size-13 items-center justify-center rounded-lg bg-gradient-to-r from-amber-700 to-amber-400 lg:size-10">
+                                    <FaLaravel className="size-6 text-white" />
+                                </div> */}
+                                <div className="relative flex items-center justify-center w-24 !h-1/2 rounded-lg bg-gradient-to-r from-amber-700 to-amber-400">
+                                    <FaLaravel className="absolute size-6 text-white" />
+                                </div>
+                                <div className="relative flex items-center justify-center w-24 !h-1/2 rounded-lg bg-gradient-to-r from-amber-700 to-amber-400 lg:h-10">
+                                    <SiFilament className="absolute size-14 text-white" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <p className="mb-0.5 font-medium text-sm md:text-base md:leading-3 md:mb-4">
+                                    Laravel
+                                </p>
+                                <div className="flex flex-col gap-2 text-gray-400 text-xs md:text-sm md:leading-3.5 md:gap-2.5">
+                                    <p>- Blade-компоненты для управления фронтендом</p>
+                                    <p>- Взаимодействие с backend-логикой</p>
+                                    <p>- Laravel Filament: настройка ресурсов, кастомизация интерфейса</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
