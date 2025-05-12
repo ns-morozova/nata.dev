@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
     ];
 
     return (
-        <footer className="px-4 py-8 lg:px-8 md:py-16">
+        <footer id="footer" className="px-4 py-8 lg:px-8 md:py-16">
             <div className="max-w-7xl mx-auto">
                 <p className="mb-4 font-medium text-gray-400 text-center uppercase text-sm md:text-base">
                     Начало продуктивного сотрудничества

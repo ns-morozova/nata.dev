@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
     return (
-        <section id="home" className="px-4 md:px-8 overflow-hidden">
+        <section id="home" className="relative px-4 md:px-8 overflow-hidden">
         {/* <section id="home" className="relative bg-cover bg-center bg-no-repeat px-4 md:px-8 md:bg-top overflow-hidden"
             style={{ backgroundImage: "url('/nata.dev/images/banner-hero.jpg')" }}
         > */}

@@ -1,14 +1,16 @@
 import React from 'react';
 import { Hero } from '../sections';
 import { About } from '../sections';
+import { SiteCreation } from '../sections';
 import { CasesPreview } from '../sections';
 import { Stack } from '../sections';
 
 const Home: React.FC = () => {
     return (
-        <div>
+        <div className="overflow-hidden">
             <Hero />
             <About />
+            <SiteCreation />
             <CasesPreview />
             <Stack />
         </div>

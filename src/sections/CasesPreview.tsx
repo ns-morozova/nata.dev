@@ -28,7 +28,7 @@ const CasesPreview: React.FC = () => {
     ];
 
     return (
-        <section className="px-4 py-8 lg:px-8 md:py-16">
+        <section className="px-4 py-8 md:px-8 md:py-16">
             <div className="relative max-w-7xl mx-auto">
                 <SectionTitle className="mb-10 md:mb-12">Мои работы</SectionTitle>
                 <div className="mb-10 grid grid-cols-1 gap-y-10 sm:gap-y-16 md:grid-cols-3 md:gap-x-6 lg:gap-10 xl:grid-cols-3">
