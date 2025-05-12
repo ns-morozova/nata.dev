@@ -4,6 +4,7 @@ import { About } from '../sections';
 import { SiteCreation } from '../sections';
 import { CasesPreview } from '../sections';
 import { Stack } from '../sections';
+import { Education } from '../sections';
 
 const Home: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
             <SiteCreation />
             <CasesPreview />
             <Stack />
+            <Education />
         </div>
     );
 };
