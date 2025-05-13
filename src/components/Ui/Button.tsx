@@ -13,16 +13,16 @@ const Button: React.FC<ButtonProps> = ({ type, label, className = '' }) => {
     const buttonStyles = {
         primary: (
             <button
-                className={`${baseStyles} bg-gradient-to-r from-cyan-700 to-cyan-400 py-2 px-6 ${className}`}
+                className={`${baseStyles} bg-gradient-to-r from-[#684b2d] to-[#c8ae7b] py-2 px-6 ${className}`}
             >
                 {label}
             </button>
         ),
         outline: (
             <button
-                className={`${baseStyles} bg-gradient-to-r from-cyan-700 to-cyan-400 p-px ${className}`}
+                className={`${baseStyles} bg-gradient-to-r from-[#684b2d] to-[#c8ae7b] p-px ${className}`}
             >
-                <div className="bg-black rounded-full font-semibold uppercase text-xs px-4 py-2 hover:bg-gradient-to-r hover:from-cyan-700 hover:to-cyan-400 transition duration-300">
+                <div className="bg-black rounded-full font-semibold uppercase text-xs px-4 py-2 hover:bg-gradient-to-r hover:from-[#684b2d] hover:to-[#c8ae7b] transition duration-300">
                     {label}
                 </div>
             </button>

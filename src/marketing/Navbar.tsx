@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
                                 duration={1000}
                                 className="-m-1.5 p-1.5 cursor-pointer"
                             >
-                                <RiHome9Fill className="size-6" />
+                                <RiHome9Fill className="size-6 hover:text-[#ebd7b0] transition-colors duration-300" />
                             </ScrollLink>
                         </div>
 
@@ -53,10 +53,10 @@ const Navbar: React.FC = () => {
                                 <Link
                                     key={item.id}
                                     to={item.to}
-                                    className="relative group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
+                                    className="relative group hover:text-[#ebd7b0] transition-colors duration-300 px-1 cursor-pointer"
                                 >
                                     {item.label}
-                                    <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                                    {/* <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span> */}
                                 </Link>
                             ))}
                         </div>
