@@ -1,9 +1,10 @@
 import React from 'react';
+import { HeroCases } from '../sections';
 
 const Cases: React.FC = () => {
     return (
-        <div className="pt-24">
-            <h2 className="text-7xl">Тут будут мои кейсы</h2>
+        <div className="">
+            <HeroCases />
         </div>
     );
 };
