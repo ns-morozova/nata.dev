@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({ type, label, className = '' }) => {
     const buttonStyles = {
         primary: (
             <button
-                className={`${baseStyles} bg-gradient-to-r from-[#684b2d] to-[#c8ae7b] py-2 px-6 ${className}`}
+                className={`${baseStyles} bg-gradient-to-r from-pink-900 to-pink-500/80 py-2 px-6 hover:from-pink-900/80 hover:to-pink-600/80 ${className}`}
             >
                 {label}
             </button>
