@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { RiHome9Fill } from "react-icons/ri";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -12,8 +11,26 @@ const Navbar: React.FC = () => {
         { id: 1, to: "/", label: "Главная" },
         { id: 3, to: "/services", label: "Услуги" },
         { id: 2, to: "/cases", label: "Кейсы" },
-        { id: 4, to: "/cases", label: "Кейсы" },
     ];
+
+    // Функция для плавной прокрутки наверх
+    const scrollToTop = () => {
+        const duration = 800;
+        const start = window.scrollY;
+        const startTime = performance.now();
+
+        const animateScroll = (currentTime: number) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            window.scrollTo(0, start - start * progress);
+
+            if (progress < 1) {
+                requestAnimationFrame(animateScroll);
+            }
+        };
+
+        requestAnimationFrame(animateScroll);
+    };
 
     return (
         <header className="fixed top-0 left-0 w-full z-50">
@@ -25,17 +42,23 @@ const Navbar: React.FC = () => {
                     <div className=""
                     ></div>
 
-                    <div className="relative flex items-center justify-end px-3 py-3 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
-                        <div className="absolute left-3 flex sm:left-4 md:left-8 lg:flex-1">
-                            <ScrollLink
-                                to="home"
-                                smooth={true}
-                                duration={1000}
-                                className="-m-1.5 p-1.5 cursor-pointer"
-                            >
-                                <RiHome9Fill className="size-6 hover:text-[#ebd7b0] transition-colors duration-300" />
-                            </ScrollLink>
-                        </div>
+                    <div className="relative flex items-center justify-between px-3 py-3 md:px-8 md:py-3.5 lg:py-4.5 2xl:px-4">
+                        {/* <ScrollLink
+                            to="home"
+                            smooth={true}
+                            duration={1000}
+                            className="cursor-pointer"
+                        >
+                            <RiHome9Fill className="size-6 hover:text-[#ebd7b0] transition-colors duration-300" />
+                        </ScrollLink> */}
+
+                        <button
+                            onClick={scrollToTop}
+                            className="cursor-pointer"
+                        >
+                            <RiHome9Fill className="size-6 hover:text-pink-400 transition-colors duration-300" />
+                        </button>
+                        
 
                         <div className="flex lg:hidden">
                             <button
@@ -53,7 +76,7 @@ const Navbar: React.FC = () => {
                                 <Link
                                     key={item.id}
                                     to={item.to}
-                                    className="relative group hover:text-[#ebd7b0] transition-colors duration-300 px-1 cursor-pointer"
+                                    className="relative group hover:text-pink-400 transition-colors duration-300 px-1 cursor-pointer"
                                 >
                                     {item.label}
                                     {/* <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span> */}
