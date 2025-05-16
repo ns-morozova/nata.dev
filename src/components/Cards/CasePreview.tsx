@@ -16,7 +16,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({
     link,
 }) => {
     return (
-        <div className="group relative rounded-2xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl overflow-hidden z-10">
+        <article className="group relative rounded-2xl bg-white shadow-lg transition-all duration-500 hover:shadow-2xl overflow-hidden z-10">
             {/* Градиентные эффекты */}
             <div className="absolute -right-12 -top-12 z-10 h-24 w-24 rounded-full bg-gradient-to-br from-[#c8ae7b] to-[#684b2d] opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-80"></div>
             <div className="absolute -left-12 -bottom-12 z-10 h-24 w-24 rounded-full bg-gradient-to-tr from-slate-300 to-slate-500 opacity-0 blur-xl transition-opacity duration-700 group-hover:opacity-80"></div>
@@ -74,7 +74,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({
                     </a>
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 

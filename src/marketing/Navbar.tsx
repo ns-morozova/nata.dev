@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { RiHome9Fill } from "react-icons/ri";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     const menuItems = [
         { id: 1, to: "/", label: "Главная" },
@@ -31,6 +32,11 @@ const Navbar: React.FC = () => {
 
         requestAnimationFrame(animateScroll);
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setMobileMenuOpen(false);
+    }, [location]);
 
     return (
         <header className="fixed top-0 left-0 w-full z-50">
