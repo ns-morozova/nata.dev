@@ -10,16 +10,14 @@ const HeroCases: React.FC = () => {
                 <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                     {/* Левая часть: Текст и кнопки */}
                     <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
-                        <h1 className="text-5xl font-semibold tracking-tight text-pretty sm:text-7xl">
+                        <h1 className="font-semibold uppercase text-5xl sm:text-7xl">
                             Обзор проектов
                         </h1>
                         <p className="mt-8 text-sm sm:max-w-md sm:text-base lg:max-w-none">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                            Elit sunt amet fugiat veniam occaecat fugiat aliqua. Anim aute id magna aliqua ad ad non
-                            deserunt sunt.
+                            Качественный фронтенд делает сайты удобными, красивыми и функциональными, превращая идеи в реальный пользовательский опыт.
                         </p>
 
-                        <ScrollLink to="stack" smooth={true} duration={1000}>
+                        <ScrollLink to="cases" smooth={true} duration={1000}>
                             <Button type="primary" label="смотреть" className="max-w-max uppercase mt-10" />
                         </ScrollLink>
                     </div>
@@ -68,18 +66,6 @@ const HeroCases: React.FC = () => {
                                 </div>
 
                                 <div className="absolute inset-0 w-full h-full bg-black/20"></div>
-                                {/* <div className="w-96">
-                                    <svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
-                                        <defs>
-                                            <path id="curve" d="M 50,150 C 150,50 350,250 450,150" />
-                                        </defs>
-                                        <text fontSize="48" fill="#be185d">
-                                            <textPath href="#curve" startOffset="0%">
-                                                frontend
-                                            </textPath>
-                                        </text>
-                                    </svg>
-                                </div> */}
                             </div>
                         </div>
                         <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
