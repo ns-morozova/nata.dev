@@ -1,14 +1,12 @@
 import React from 'react';
-import { RiReactjsLine } from 'react-icons/ri';
-import { TbBrandTypescript } from 'react-icons/tb';
-import { IoLogoCss3 } from 'react-icons/io';
+import { FaLaravel } from "react-icons/fa";
+import { BiLogoPhp } from "react-icons/bi";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { RxComponentBoolean } from "react-icons/rx";
 import { IoLogoGithub } from 'react-icons/io';
 import { RxFigmaLogo } from 'react-icons/rx';
-import { AiOutlineApi } from 'react-icons/ai';
-import { MdOutlineAnimation } from 'react-icons/md';
-import { LuSquareCheckBig } from "react-icons/lu";
 
-const ShmoneDetails = () => {
+const AcademyDetails = () => {
     return (
         <div className="text-black">
             <h4 className="mb-3 font-semibold uppercase text-base md:text-xl md:mb-5">
@@ -21,8 +19,8 @@ const ShmoneDetails = () => {
                         <h5 className="mb-2 font-medium text-sm md:text-lg">Основные задачи:</h5>
                         <ul className="pl-4 list-disc text-xs sm:pl-5 md:text-base">
                             <li>Реализация интерфейса по готовому дизайн-макету</li>
-                            <li>Создание CSS-анимаций</li>
-                            <li>Интеграция с API для отправки данных</li>
+                            <li>Кастомизация админ-панели Filament</li>
+                            <li>Динамическое отображение данных</li>
                         </ul>
                     </div>
 
@@ -30,11 +28,10 @@ const ShmoneDetails = () => {
                         <h5 className="mb-2 font-medium text-sm md:text-lg">Стек и технологии:</h5>
                         <ul className="space-y-1 text-xs md:text-base">
                             {[
-                                { icon: <RiReactjsLine />, text: 'Библиотека: React' },
-                                { icon: <TbBrandTypescript />, text: 'Язык программирования: TypeScript' },
-                                { icon: <IoLogoCss3 />, text: 'Стили: CSS-модули' },
-                                { icon: <AiOutlineApi />, text: 'Работа с данными: Fetch API' },
-                                { icon: <MdOutlineAnimation />, text: 'Анимации: CSS-анимации' },
+                                { icon: <FaLaravel />, text: 'Фреймворк: Laravel' },
+                                { icon: <BiLogoPhp />, text: 'Язык программирования: PHP' },
+                                { icon: <RiTailwindCssFill />, text: 'Стили: Tailwind CSS' },
+                                { icon: <RxComponentBoolean />, text: 'Шаблонизатор: Blade' },
                                 { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
                                 { icon: <RxFigmaLogo />, text: 'Работа с дизайн-макетом: Figma' },
                             ].map(({ icon, text }, index) => (
@@ -64,20 +61,7 @@ const ShmoneDetails = () => {
                     </div>
 
                     <div className="flex flex-col justify-between gap-2">
-                        <div className="flex gap-2 flex-wrap flex-grow-1 px-4 py-3 border border-black/30 rounded-2xl text-xs sm:rounded-3xl md:px-6 md:py-5 lg:flex-grow-1 overflow-hidden">
-                            <div className="flex flex-col items-center">
-                                <LuSquareCheckBig className="text-pink-700" />
-                                <span>Адаптивность</span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <LuSquareCheckBig className="text-pink-700" />
-                                <span>React Hooks</span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <LuSquareCheckBig className="text-pink-700" />
-                                <span>Интерактивная навигация</span>
-                            </div>
-                        </div>
+                        <div className="flex-grow-1 px-4 py-3 border border-black/30 rounded-2xl sm:rounded-3xl md:px-6 md:py-5 lg:flex-grow-1 overflow-hidden"></div>
                         <div className="grid grid-cols-2 gap-2 xs:flex">
                             <div className="order-1 rounded-2xl xs:w-28 sm:rounded-3xl lg:w-48 lg:order-2 overflow-hidden">
                                 <video
@@ -106,4 +90,4 @@ const ShmoneDetails = () => {
     );
 };
 
-export default ShmoneDetails;
+export default AcademyDetails;

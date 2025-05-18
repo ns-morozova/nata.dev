@@ -2,6 +2,7 @@ import React from 'react';
 import { SectionTitle } from '../components/Ui';
 import { CaseShow } from '../components/Cards';
 import { ShmoneDetails } from '../details';
+import { AcademyDetails } from '../details';
 
 const CasesShow: React.FC = () => {
     const projects = [
@@ -17,16 +18,7 @@ const CasesShow: React.FC = () => {
             cover: '/nata.dev/images/cover/academy.png',
             title: 'Beauty Academy',
             description: 'Многостраничный сайт для продажи курсов и обучений в сфере бьюти-индустрии',
-            expandedContent: (
-                <div>
-                    <h4 className="text-lg font-medium">Особенности:</h4>
-                    <ul className="list-disc pl-4">
-                        <li>Адаптивный дизайн;</li>
-                        <li>Интерактивные элементы;</li>
-                        <li>Интеграция с платежными системами.</li>
-                    </ul>
-                </div>
-            ),
+            expandedContent: <AcademyDetails />,
         },
         {
             video: '/nata.dev/video/chicscoin.MP4',
