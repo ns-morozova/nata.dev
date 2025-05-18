@@ -114,7 +114,7 @@ const CaseShow: React.FC<CaseShowProps> = ({
             {/* Раскрывающийся блок с деталями */}
             {isExpanded && (
                 <div
-                    className="bg-white/60 rounded-3xl px-4 py-3 shadow-lg md:px-6 md:py-4 transition-all duration-500 ease-in-out"
+                    className="bg-white/60 rounded-3xl p-4 shadow-lg md:p-6 transition-all duration-500 ease-in-out"
                     style={{ maxHeight: isExpanded ? '1000px' : '0', overflow: 'hidden' }}
                 >
                     {expandedContent}

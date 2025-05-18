@@ -1,6 +1,7 @@
 import React from 'react';
 import { SectionTitle } from '../components/Ui';
 import { CaseShow } from '../components/Cards';
+import { ShmoneDetails } from '../details';
 
 const CasesShow: React.FC = () => {
     const projects = [
@@ -9,12 +10,7 @@ const CasesShow: React.FC = () => {
             cover: '/nata.dev/images/cover/shmoneloops.png',
             title: 'ShmoneLoops',
             description: 'Современный интерактивный лендинг с анимациями и возможностью записи в лист ожидания',
-            expandedContent: (
-                <div className="text-black">
-                    <h4 className="text-lg font-medium">Детали проекта</h4>
-                    <p>Этот проект был разработан для демонстрации современных технологий.</p>
-                </div>
-            ),
+            expandedContent: <ShmoneDetails />,
         },
         {
             video: '/nata.dev/video/shmoneloops.MP4',

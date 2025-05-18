@@ -1,0 +1,1 @@
+export { default as ShmoneDetails } from './ShmoneDetails';
