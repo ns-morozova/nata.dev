@@ -9,7 +9,8 @@ interface CaseShowProps {
     description: string;
     isEven: boolean;
     expandedContent?: React.ReactNode;
-    gradientColor?: string;
+    extraClasses?: string;
+    expandedBgColor?: string;
 }
 
 const CaseShow: React.FC<CaseShowProps> = ({
@@ -19,7 +20,8 @@ const CaseShow: React.FC<CaseShowProps> = ({
     description,
     isEven,
     expandedContent,
-    gradientColor = "rgba(190, 24, 93, 0.5)",
+    extraClasses = "",
+    expandedBgColor = "rgba(27, 33, 45, 1)",
 }) => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
     const [hasError, setHasError] = useState(false);
@@ -67,19 +69,19 @@ const CaseShow: React.FC<CaseShowProps> = ({
                 <div
                     className={`grid grid-cols-3 gap-3 lg:flex lg:flex-col ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
                 >
-                    <div className="relative col-span-2 bg-gray-700/45 rounded-3xl px-4 py-3 md:px-6 md:py-5 lg:h-1/2 overflow-hidden">
+                    <div className={`relative col-span-2 rounded-3xl px-4 py-3 md:px-6 md:py-5 lg:h-1/2 overflow-hidden ${extraClasses}`}>
                         <div className="relative z-10">
                             <h3 className="mb-3 font-medium text-xl md:mb-5 md:text-3xl">{title}</h3>
-                            <p className="text-white/80 text-xs md:text-base xl:w-4/5">{description}</p>
+                            <p className="text-xs md:text-base xl:w-4/5">{description}</p>
                         </div>
 
                         {/* <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-700/50 to-transparent"></div> */}
-                        <div
+                        {/* <div
                             className="absolute inset-0 w-full h-full bg-gradient-to-r to-transparent"
                             style={{
                                 backgroundImage: `linear-gradient(to right, ${gradientColor}, transparent)`,
                             }}
-                        ></div>
+                        ></div> */}
                     </div>
 
                     <div className="relative border border-white/20 rounded-3xl lg:h-1/2 overflow-hidden">
@@ -123,7 +125,11 @@ const CaseShow: React.FC<CaseShowProps> = ({
             {isExpanded && (
                 <div
                     className="bg-white/60 rounded-3xl p-4 shadow-lg md:p-6 transition-all duration-500 ease-in-out"
-                    style={{ maxHeight: isExpanded ? '2000px' : '0', overflow: 'hidden' }}
+                    style={{
+                        maxHeight: isExpanded ? '2000px' : '0',
+                        overflow: 'hidden',
+                        backgroundColor: `${expandedBgColor}`,
+                    }}
                 >
                     {expandedContent}
                 </div>

@@ -12,6 +12,7 @@ const CasesShow: React.FC = () => {
             title: 'ShmoneLoops',
             description: 'Современный интерактивный лендинг с анимациями и возможностью записи в лист ожидания',
             expandedContent: <ShmoneDetails />,
+            extraClasses: "bg-gradient-to-r from-[#141620] to-[#415674]",
         },
         {
             video: '/nata.dev/video/academy.MP4',
@@ -19,7 +20,8 @@ const CasesShow: React.FC = () => {
             title: 'Beauty Academy',
             description: 'Многостраничный сайт для продажи курсов и обучений в сфере бьюти-индустрии',
             expandedContent: <AcademyDetails />,
-            gradientColor: "rgba(235, 200, 167, 0.8)",
+            expandedBgColor: "rgba(241, 232, 223, 1)",
+            extraClasses: "text-black bg-gradient-to-r from-[#D1A98C] to-[#EBC8A7]",
         },
         {
             video: '/nata.dev/video/chicscoin.MP4',
@@ -31,6 +33,7 @@ const CasesShow: React.FC = () => {
                     <p>Детали проекта</p>
                 </div>
             ),
+            extraClasses: "bg-gradient-to-r from-[#AF0092] to-teal-900",
         },
     ];
 
@@ -49,7 +52,8 @@ const CasesShow: React.FC = () => {
                                 title={project.title}
                                 description={project.description}
                                 expandedContent={project.expandedContent}
-                                gradientColor={project.gradientColor}
+                                extraClasses={project.extraClasses}
+                                expandedBgColor={project.expandedBgColor}
                             />
                         ))}
                     </div>

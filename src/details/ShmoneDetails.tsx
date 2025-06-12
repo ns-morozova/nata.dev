@@ -6,11 +6,11 @@ import { IoLogoGithub } from 'react-icons/io';
 import { RxFigmaLogo } from 'react-icons/rx';
 import { AiOutlineApi } from 'react-icons/ai';
 import { MdOutlineAnimation } from 'react-icons/md';
-import { LuSquareCheckBig } from "react-icons/lu";
+// import { LuSquareCheckBig } from "react-icons/lu";
 
 const ShmoneDetails = () => {
     return (
-        <div className="text-black">
+        <div className="text-white">
             <h4 className="mb-3 font-semibold uppercase text-base md:text-xl md:mb-5">
                 Детали проекта
             </h4>
