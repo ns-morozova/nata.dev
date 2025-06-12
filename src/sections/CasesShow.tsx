@@ -14,11 +14,12 @@ const CasesShow: React.FC = () => {
             expandedContent: <ShmoneDetails />,
         },
         {
-            video: '/nata.dev/video/shmoneloops.MP4',
+            video: '/nata.dev/video/academy.MP4',
             cover: '/nata.dev/images/cover/academy.png',
             title: 'Beauty Academy',
             description: 'Многостраничный сайт для продажи курсов и обучений в сфере бьюти-индустрии',
             expandedContent: <AcademyDetails />,
+            gradientColor: "rgba(235, 200, 167, 0.8)",
         },
         {
             video: '/nata.dev/video/chicscoin.MP4',
@@ -27,12 +28,7 @@ const CasesShow: React.FC = () => {
             description: 'Мультиязычный лендинг с самостоятельно разработанным дизайном и базовой анимацией',
             expandedContent: (
                 <div>
-                    <h4 className="text-lg font-medium">Особенности:</h4>
-                    <ul className="list-disc pl-4">
-                        <li>Адаптивный дизайн;</li>
-                        <li>Интерактивные элементы;</li>
-                        <li>Интеграция с платежными системами.</li>
-                    </ul>
+                    <p>Детали проекта</p>
                 </div>
             ),
         },
@@ -53,6 +49,7 @@ const CasesShow: React.FC = () => {
                                 title={project.title}
                                 description={project.description}
                                 expandedContent={project.expandedContent}
+                                gradientColor={project.gradientColor}
                             />
                         ))}
                     </div>

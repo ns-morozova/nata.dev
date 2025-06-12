@@ -51,40 +51,7 @@ const AcademyDetails = () => {
                     </div>
                 </div>
 
-                <div className="flex gap-2 md:flex-col md:items-end lg:flex-row-reverse lg:items-stretch lg:h-96">
-                    <div className="flex-shrink-0 h-56 lg:h-96">
-                        <img
-                            alt="mockup"
-                            src="/nata.dev/images/cases/shmoneloops_mob.png"
-                            className="relative h-full object-cover"
-                        />
-                    </div>
-
-                    <div className="flex flex-col justify-between gap-2">
-                        <div className="flex-grow-1 px-4 py-3 border border-black/30 rounded-2xl sm:rounded-3xl md:px-6 md:py-5 lg:flex-grow-1 overflow-hidden"></div>
-                        <div className="grid grid-cols-2 gap-2 xs:flex">
-                            <div className="order-1 rounded-2xl xs:w-28 sm:rounded-3xl lg:w-48 lg:order-2 overflow-hidden">
-                                <video
-                                    src="/nata.dev/video/shmoneloops_anim.MP4"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="w-full h-full object-cover"
-                                    aria-label="animation"
-                                />
-                            </div>
-
-                            <div className="aspect-square order-2 rounded-2xl xs:w-28 sm:rounded-3xl lg:w-48 lg:order-1 overflow-hidden">
-                                <img
-                                    alt="mockup"
-                                    src="/nata.dev/images/cases/shmoneloops_ex.png"
-                                    className="relative h-full object-cover"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div></div>
             </div>
         </div>
     );
