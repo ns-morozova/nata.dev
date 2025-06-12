@@ -67,9 +67,9 @@ const CaseShow: React.FC<CaseShowProps> = ({
 
                 {/* Блок инфо */}
                 <div
-                    className={`grid grid-cols-3 gap-3 lg:flex lg:flex-col ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
+                    className={`grid grid-cols-5 gap-3 lg:flex lg:flex-col ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
                 >
-                    <div className={`relative col-span-2 rounded-3xl px-4 py-3 md:px-6 md:py-5 lg:h-1/2 overflow-hidden ${extraClasses}`}>
+                    <div className={`relative col-span-3 rounded-3xl px-4 py-3 md:px-6 md:py-5 lg:h-1/2 overflow-hidden ${extraClasses}`}>
                         <div className="relative z-10">
                             <h3 className="mb-3 font-medium text-xl md:mb-5 md:text-3xl">{title}</h3>
                             <p className="text-xs md:text-base xl:w-4/5">{description}</p>
@@ -84,7 +84,7 @@ const CaseShow: React.FC<CaseShowProps> = ({
                         ></div> */}
                     </div>
 
-                    <div className="relative border border-white/20 rounded-3xl lg:h-1/2 overflow-hidden">
+                    <div className="relative col-span-2 border border-white/20 rounded-3xl h-36 lg:h-1/2 overflow-hidden">
                         {showPreview && (
                             <img
                                 src={cover}
