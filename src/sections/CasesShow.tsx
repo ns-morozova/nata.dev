@@ -3,6 +3,8 @@ import { SectionTitle } from '../components/Ui';
 import { CaseShow } from '../components/Cards';
 import { ShmoneDetails } from '../details';
 import { AcademyDetails } from '../details';
+import { ChicscoinDetails } from '../details';
+import { QuickmarkDetails } from '../details';
 
 const CasesShow: React.FC = () => {
     const projects = [
@@ -28,12 +30,18 @@ const CasesShow: React.FC = () => {
             cover: '/nata.dev/images/cover/chicscoin.png',
             title: 'Chicscoin',
             description: 'Мультиязычный лендинг с самостоятельно разработанным дизайном и базовой анимацией',
-            expandedContent: (
-                <div>
-                    <p>Детали проекта</p>
-                </div>
-            ),
+            expandedContent: <ChicscoinDetails />,
+            expandedBgColor: "rgba(38, 38, 38, 0.8)",
             extraClasses: "bg-gradient-to-r from-[#AF0092] to-teal-900",
+        },
+        {
+            video: '/nata.dev/video/academy.MP4',
+            cover: '/nata.dev/images/cover/quickmark.png',
+            title: 'Quickmark',
+            description: 'Сервис маркировки товаров с лендингом и функциональной админ-панелью',
+            expandedContent: <QuickmarkDetails />,
+            expandedBgColor: "rgba(255, 210, 132, 1)",
+            extraClasses: "text-black bg-gradient-to-r from-[#fe985d] to-[#ffea94]",
         },
     ];
 

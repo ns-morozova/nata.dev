@@ -5,6 +5,7 @@ import { IoLogoCss3 } from 'react-icons/io';
 import { IoLogoGithub } from 'react-icons/io';
 import { RxFigmaLogo } from 'react-icons/rx';
 import { AiOutlineApi } from 'react-icons/ai';
+import { TbWebhook } from "react-icons/tb";
 import { MdOutlineAnimation } from 'react-icons/md';
 // import { LuSquareCheckBig } from "react-icons/lu";
 
@@ -35,6 +36,7 @@ const ShmoneDetails = () => {
                                     { icon: <TbBrandTypescript />, text: 'Язык программирования: TypeScript' },
                                     { icon: <IoLogoCss3 />, text: 'Стили: CSS-модули' },
                                     { icon: <AiOutlineApi />, text: 'Работа с данными: Fetch API' },
+                                    { icon: <TbWebhook />, text: 'Работа с состоянием: React Hooks' },
                                     { icon: <MdOutlineAnimation />, text: 'Анимации: CSS-анимации' },
                                     { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
                                     { icon: <RxFigmaLogo />, text: 'Работа с дизайн-макетом: Figma' },
@@ -88,7 +90,7 @@ const ShmoneDetails = () => {
 
                         <div className="order-2 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-1 xl:w-60 overflow-hidden">
                             <img
-                                alt="mockup"
+                                alt=""
                                 src="/nata.dev/images/cases/shmoneloops_ex.png"
                                 className="relative w-full h-full object-cover"
                             />

@@ -16,6 +16,9 @@ const HeroCases: React.FC = () => {
                         <p className="mt-8 text-sm sm:max-w-md sm:text-base lg:max-w-none">
                             Качественный фронтенд делает сайты удобными, красивыми и функциональными, превращая идеи в реальный пользовательский опыт.
                         </p>
+                        <p className="mt-3 text-sm sm:max-w-md sm:text-base lg:max-w-none">
+                            Приглашаю ознакомиться с моими завершенными проектами, в которых я принимала участие как фронтенд-разработчик.
+                        </p>
 
                         <ScrollLink to="cases" smooth={true} duration={1000}>
                             <Button type="primary" label="смотреть" className="max-w-max uppercase mt-10" />

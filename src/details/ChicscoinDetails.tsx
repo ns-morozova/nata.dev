@@ -1,27 +1,27 @@
 import React from 'react';
-import { FaLaravel } from "react-icons/fa";
-import { BiLogoPhp } from "react-icons/bi";
+import { RiReactjsLine } from 'react-icons/ri';
+import { TbBrandTypescript } from 'react-icons/tb';
 import { RiTailwindCssFill } from "react-icons/ri";
-import { RxComponentBoolean } from "react-icons/rx";
 import { IoLogoGithub } from 'react-icons/io';
-import { RxFigmaLogo } from 'react-icons/rx';
+import { TbWebhook } from "react-icons/tb";
+import { SiI18Next } from "react-icons/si";
 
-const AcademyDetails = () => {
+const ChicscoinDetails = () => {
     return (
-        <div className="text-black">
+        <div className="text-white">
             <h4 className="mb-3 font-semibold uppercase text-base md:text-xl md:mb-5">
                 Детали проекта
             </h4>
-            
+
             <div className="flex flex-col gap-6 lg:flex-row md:gap-7 lg:justify-between lg:gap-6">
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-between lg:w-full">
                     <div className="flex flex-col gap-3 md:flex-row-reverse md:gap-7">
                         <div className="">
                             <h5 className="mb-2 font-medium text-sm md:text-lg">Основные задачи:</h5>
                             <ul className="pl-4 list-disc flex flex-col gap-1 leading-5.5 text-xs sm:pl-3 md:text-base">
-                                <li>Реализация интерфейса по готовому дизайн-макету</li>
-                                <li>Кастомизация админ-панели Filament</li>
-                                <li>Динамическое отображение данных</li>
+                                <li>Разработка дизайна по пожеланиям заказчика</li>
+                                <li>Реализация интерфейса</li>
+                                <li>Возможность переключения на английский язык</li>
                             </ul>
                         </div>
 
@@ -29,12 +29,12 @@ const AcademyDetails = () => {
                             <h5 className="mb-2 font-medium text-sm md:text-lg">Стек и технологии:</h5>
                             <ul className="space-y-1 text-xs md:text-base">
                                 {[
-                                    { icon: <FaLaravel />, text: 'Фреймворк: Laravel' },
-                                    { icon: <BiLogoPhp />, text: 'Язык программирования: PHP' },
+                                    { icon: <RiReactjsLine />, text: 'Библиотека: React' },
+                                    { icon: <TbBrandTypescript />, text: 'Язык программирования: TypeScript' },
                                     { icon: <RiTailwindCssFill />, text: 'Стили: Tailwind CSS' },
-                                    { icon: <RxComponentBoolean />, text: 'Шаблонизатор: Blade' },
+                                    { icon: <TbWebhook />, text: 'Работа с состоянием: React Hooks' },
+                                    { icon: <SiI18Next />, text: 'Интернационализация: i18next' },
                                     { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
-                                    { icon: <RxFigmaLogo />, text: 'Работа с дизайн-макетом: Figma' },
                                 ].map(({ icon, text }, index) => (
                                     <li
                                         key={index}
@@ -72,17 +72,21 @@ const AcademyDetails = () => {
 
                     <div className="flex flex-col justify-between gap-2 sm:flex-row lg:flex-col lg:h-full">
                         <div className="order-1 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-2 xl:w-60 overflow-hidden">
-                            <img
-                                alt=""
-                                src="/nata.dev/images/cases/academy_ex2.png"
-                                className="relative w-full h-full object-cover"
+                            <video
+                                src="/nata.dev/video/shmoneloops_anim.MP4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover"
+                                aria-label="animation"
                             />
                         </div>
 
                         <div className="order-2 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-1 xl:w-60 overflow-hidden">
                             <img
                                 alt=""
-                                src="/nata.dev/images/cases/academy_ex1.png"
+                                src="/nata.dev/images/cases/shmoneloops_ex.png"
                                 className="relative w-full h-full object-cover"
                             />
                         </div>
@@ -93,4 +97,4 @@ const AcademyDetails = () => {
     );
 };
 
-export default AcademyDetails;
+export default ChicscoinDetails;

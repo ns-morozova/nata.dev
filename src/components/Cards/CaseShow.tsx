@@ -45,7 +45,7 @@ const CaseShow: React.FC<CaseShowProps> = ({
                 <div
                     className={`relative ${isEven ? 'lg:order-2' : 'lg:order-1'}`}
                 >
-                    <div className="h-56 border border-white/20 rounded-3xl sm:h-72 md:h-96 lg:h-[500px] overflow-hidden">
+                    <div className="h-60 border border-white/20 rounded-3xl sm:h-72 md:h-96 lg:h-[500px] overflow-hidden">
                         <img
                             src={cover}
                             alt={title}

@@ -6,6 +6,7 @@ import { IoLogoHtml5 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
+import { SiI18Next } from "react-icons/si";
 
 import { IoGitMerge } from "react-icons/io5";
 import { IoLogoGithub } from "react-icons/io";
@@ -46,7 +47,7 @@ const Stack: React.FC = () => {
         {
             name: 'React',
             description:
-                'Компонентный подход',
+                'Функциональные компоненты',
             icon: RiReactjsLine,
         },
         {
@@ -54,6 +55,12 @@ const Stack: React.FC = () => {
             description:
                 'Типизация для надежности',
             icon: TbBrandTypescript,
+        },
+        {
+            name: 'i18next ',
+            description:
+                'Интернационализация',
+            icon: SiI18Next,
         },
     ]
 

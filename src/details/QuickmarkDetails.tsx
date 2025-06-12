@@ -3,10 +3,10 @@ import { FaLaravel } from "react-icons/fa";
 import { BiLogoPhp } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { RxComponentBoolean } from "react-icons/rx";
+import { MdTranslate } from "react-icons/md";
 import { IoLogoGithub } from 'react-icons/io';
-import { RxFigmaLogo } from 'react-icons/rx';
 
-const AcademyDetails = () => {
+const QuickmarkDetails = () => {
     return (
         <div className="text-black">
             <h4 className="mb-3 font-semibold uppercase text-base md:text-xl md:mb-5">
@@ -19,9 +19,10 @@ const AcademyDetails = () => {
                         <div className="">
                             <h5 className="mb-2 font-medium text-sm md:text-lg">Основные задачи:</h5>
                             <ul className="pl-4 list-disc flex flex-col gap-1 leading-5.5 text-xs sm:pl-3 md:text-base">
-                                <li>Реализация интерфейса по готовому дизайн-макету</li>
+                                <li>Разработка дизайна лендинга в соответствии с функциями сервиса</li>
+                                <li>Реализация интерфейса</li>
                                 <li>Кастомизация админ-панели Filament</li>
-                                <li>Динамическое отображение данных</li>
+                                <li>Возможность переключения админ-панели на альтернативный язык</li>
                             </ul>
                         </div>
 
@@ -33,8 +34,8 @@ const AcademyDetails = () => {
                                     { icon: <BiLogoPhp />, text: 'Язык программирования: PHP' },
                                     { icon: <RiTailwindCssFill />, text: 'Стили: Tailwind CSS' },
                                     { icon: <RxComponentBoolean />, text: 'Шаблонизатор: Blade' },
+                                    { icon: <MdTranslate />, text: 'Интернационализация: localization' },
                                     { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
-                                    { icon: <RxFigmaLogo />, text: 'Работа с дизайн-макетом: Figma' },
                                 ].map(({ icon, text }, index) => (
                                     <li
                                         key={index}
@@ -72,17 +73,21 @@ const AcademyDetails = () => {
 
                     <div className="flex flex-col justify-between gap-2 sm:flex-row lg:flex-col lg:h-full">
                         <div className="order-1 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-2 xl:w-60 overflow-hidden">
-                            <img
-                                alt=""
-                                src="/nata.dev/images/cases/academy_ex2.png"
-                                className="relative w-full h-full object-cover"
+                            <video
+                                src="/nata.dev/video/shmoneloops_anim.MP4"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover"
+                                aria-label="animation"
                             />
                         </div>
 
                         <div className="order-2 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-1 xl:w-60 overflow-hidden">
                             <img
                                 alt=""
-                                src="/nata.dev/images/cases/academy_ex1.png"
+                                src="/nata.dev/images/cases/shmoneloops_ex.png"
                                 className="relative w-full h-full object-cover"
                             />
                         </div>
@@ -93,4 +98,4 @@ const AcademyDetails = () => {
     );
 };
 
-export default AcademyDetails;
+export default QuickmarkDetails;
