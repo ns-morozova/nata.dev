@@ -35,12 +35,12 @@ const CasesShow: React.FC = () => {
             extraClasses: "bg-gradient-to-r from-[#AF0092] to-teal-900",
         },
         {
-            video: '/nata.dev/video/academy.MP4',
+            video: '/nata.dev/video/quickmark.MP4',
             cover: '/nata.dev/images/cover/quickmark.png',
             title: 'Quickmark',
             description: 'Сервис маркировки товаров с лендингом и функциональной админ-панелью',
             expandedContent: <QuickmarkDetails />,
-            expandedBgColor: "rgba(255, 210, 132, 1)",
+            expandedBgColor: "rgba(255, 255, 255, 1)",
             extraClasses: "text-black bg-gradient-to-r from-[#fe985d] to-[#ffea94]",
         },
     ];
