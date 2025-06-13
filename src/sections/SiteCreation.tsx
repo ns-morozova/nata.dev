@@ -8,16 +8,16 @@ const SiteCreation: React.FC = () => {
     return (
         <section className="relative py-16 pl-4 md:py-24 md:pl-8">
             <div className="relative max-w-7xl mx-auto">
-                <div className="flex flex-col gap-10 md:flex-row md:justify-between">
+                <div className="flex flex-col gap-10 md:flex-row md:justify-between md:items-center">
                     <div className="md:w-1/2 md:flex md:flex-col">
                         <SectionTitle className="mb-10 md:mb-12">Создание сайтов</SectionTitle>
                         <p className="mb-6 w-4/5 text-sm sm:w-full md:text-base lg:w-5/6">
                             Сайт - это визитная карточка бизнеса, бренда или специалиста, а также мощный инструмент для привлечения клиентов, повышения узнаваемости и продаж.
                         </p>
-                        <p className="mb-4 w-4/5 text-sm sm:w-full md:text-base lg:w-5/6">
+                        <p className="mb-4 w-4/5 text-sm sm:w-full md:text-base md:mb-10 lg:w-5/6">
                             Моя задача как фронтенд-разработчика - реализация удобного интерфейса и всей визуальной составляющей сайта (по вашему дизайну или идее) с быстрой загрузкой страниц и адаптивностью под любые устройства.
                         </p>
-                        <ScrollLink to="footer" smooth={true} duration={1000} className="hidden md:block md:mt-auto">
+                        <ScrollLink to="footer" smooth={true} duration={1000} className="hidden md:block">
                             <Button type="outline" label="хочу свой сайт" className="max-w-max" />
                         </ScrollLink>
                     </div>

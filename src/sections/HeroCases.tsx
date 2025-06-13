@@ -13,10 +13,10 @@ const HeroCases: React.FC = () => {
                         <h1 className="font-semibold uppercase text-5xl sm:text-7xl">
                             Обзор проектов
                         </h1>
-                        <p className="mt-8 text-sm sm:max-w-md sm:text-base lg:max-w-none">
+                        {/* <p className="mt-8 text-sm sm:max-w-md sm:text-base lg:max-w-none">
                             Качественный фронтенд делает сайты удобными, красивыми и функциональными, превращая идеи в реальный пользовательский опыт.
-                        </p>
-                        <p className="mt-3 text-sm sm:max-w-md sm:text-base lg:max-w-none">
+                        </p> */}
+                        <p className="mt-8 text-sm sm:max-w-md sm:text-base lg:max-w-3/4">
                             Приглашаю ознакомиться с моими завершенными проектами, в которых я принимала участие как фронтенд-разработчик.
                         </p>
 

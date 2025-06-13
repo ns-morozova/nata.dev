@@ -20,9 +20,9 @@ const Button: React.FC<ButtonProps> = ({ type, label, className = '' }) => {
         ),
         outline: (
             <button
-                className={`${baseStyles} bg-gradient-to-r from-[#684b2d] to-[#c8ae7b] p-px ${className}`}
+                className={`${baseStyles} bg-gradient-to-r from-pink-900 to-pink-500/80 p-px ${className}`}
             >
-                <div className="bg-black rounded-full font-semibold uppercase text-xs px-4 py-2 hover:bg-gradient-to-r hover:from-[#684b2d] hover:to-[#c8ae7b] transition duration-300">
+                <div className="bg-black rounded-full font-semibold uppercase text-xs px-4 py-2 hover:bg-gradient-to-r hover:from-pink-900 hover:to-pink-500/80 transition duration-300">
                     {label}
                 </div>
             </button>
