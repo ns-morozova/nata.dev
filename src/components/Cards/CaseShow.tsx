@@ -107,8 +107,19 @@ const CaseShow: React.FC<CaseShowProps> = ({
                             />
                         )}
 
-                        <div
+                        {/* <div
                             className={`absolute bottom-2 right-2 ${isEven ? 'lg:right-auto lg:left-2' : ''} flex items-center justify-center p-1 border border-white/40 text-white/60 rounded-full hover:border-white/50 hover:text-white/70 cursor-pointer transition-all duration-300`}
+                            onClick={() => setIsExpanded(!isExpanded)}
+                        >
+                            {isExpanded ? (
+                                <MdExpandLess className="size-6" />
+                            ) : (
+                                <MdExpandMore className="size-6" />
+                            )}
+                        </div> */}
+
+                        <div
+                            className={`absolute bottom-2 right-2 ${isEven ? 'lg:right-auto lg:left-2' : ''} flex items-center justify-center p-1 bg-white text-pink-500 border border-pink-500 rounded-full hover:text-pink-800 hover:border-pink-800 cursor-pointer transition-all duration-300`}
                             onClick={() => setIsExpanded(!isExpanded)}
                         >
                             {isExpanded ? (

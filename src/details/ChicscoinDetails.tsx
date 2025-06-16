@@ -55,7 +55,7 @@ const ChicscoinDetails = () => {
                     <div className="hidden sm:block flex-shrink-0 h-80 md:h-64 lg:h-80 xl:h-96">
                         <img
                             alt="mockup"
-                            src="/nata.dev/images/cases/shmoneloops_mob.png"
+                            src="/nata.dev/images/cases/chicscoin_mob.png"
                             className="relative h-full object-cover"
                         />
                     </div>
@@ -65,28 +65,24 @@ const ChicscoinDetails = () => {
                     <div className="sm:hidden w-1/2 flex-shrink-0">
                         <img
                             alt="mockup"
-                            src="/nata.dev/images/cases/shmoneloops_mob.png"
+                            src="/nata.dev/images/cases/chicscoin_mob.png"
                             className="relative w-full object-cover"
                         />
                     </div>
 
                     <div className="flex flex-col justify-between gap-2 sm:flex-row lg:flex-col lg:h-full">
                         <div className="order-1 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-2 xl:w-60 overflow-hidden">
-                            <video
-                                src="/nata.dev/video/shmoneloops_anim.MP4"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="w-full h-full object-cover"
-                                aria-label="animation"
+                            <img
+                                alt=""
+                                src="/nata.dev/images/cases/chicscoin_ex2.png"
+                                className="relative w-full h-full object-cover"
                             />
                         </div>
 
                         <div className="order-2 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-1 xl:w-60 overflow-hidden">
                             <img
                                 alt=""
-                                src="/nata.dev/images/cases/shmoneloops_ex.png"
+                                src="/nata.dev/images/cases/chicscoin_ex1.png"
                                 className="relative w-full h-full object-cover"
                             />
                         </div>

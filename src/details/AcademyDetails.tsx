@@ -55,7 +55,7 @@ const AcademyDetails = () => {
                     <div className="hidden sm:block flex-shrink-0 h-80 md:h-64 lg:h-80 xl:h-96">
                         <img
                             alt="mockup"
-                            src="/nata.dev/images/cases/shmoneloops_mob.png"
+                            src="/nata.dev/images/cases/academy_mob.png"
                             className="relative h-full object-cover"
                         />
                     </div>
@@ -65,7 +65,7 @@ const AcademyDetails = () => {
                     <div className="sm:hidden w-1/2 flex-shrink-0">
                         <img
                             alt="mockup"
-                            src="/nata.dev/images/cases/shmoneloops_mob.png"
+                            src="/nata.dev/images/cases/academy_mob.png"
                             className="relative w-full object-cover"
                         />
                     </div>

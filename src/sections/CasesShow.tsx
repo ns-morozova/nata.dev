@@ -40,7 +40,7 @@ const CasesShow: React.FC = () => {
             title: 'Quickmark',
             description: 'Сервис маркировки товаров с лендингом и функциональной админ-панелью',
             expandedContent: <QuickmarkDetails />,
-            expandedBgColor: "rgba(255, 255, 255, 1)",
+            expandedBgColor: "rgba(255, 210, 132, 1)",
             extraClasses: "text-black bg-gradient-to-r from-[#fe985d] to-[#ffea94]",
         },
     ];
@@ -50,7 +50,7 @@ const CasesShow: React.FC = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="relative z-10">
                     <SectionTitle className="mb-10 md:mb-12">Мои работы</SectionTitle>
-                    <div className="mb-10 flex flex-col gap-10 md:gap-16">
+                    <div className="mb-10 flex flex-col gap-10 md:gap-16 md:mb-20">
                         {projects.map((project, index) => (
                             <CaseShow
                                 isEven={index % 2 === 1}
@@ -65,6 +65,9 @@ const CasesShow: React.FC = () => {
                             />
                         ))}
                     </div>
+                    <p className="w-5/6 mx-auto text-center text-sm md:text-base lg:w-2/3 xl:w-1/2">
+                        Часть проектов находится под NDA и не могут быть размещены в портфолио. Свяжитесь со мной для уточнения деталей вашего проекта.
+                    </p>
                 </div>
             </div>
         </section>
