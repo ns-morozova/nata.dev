@@ -24,7 +24,7 @@ const ShmoneDetails = () => {
                             <ul className="pl-4 list-disc flex flex-col gap-1 leading-5.5 text-xs sm:pl-3 md:text-base">
                                 <li>Реализация интерфейса по готовому дизайн-макету</li>
                                 <li>Создание CSS-анимаций</li>
-                                <li>Интеграция с API для отправки данных</li>
+                                <li>Интеграция с бэкендом через API для отправки данных</li>
                             </ul>
                         </div>
 

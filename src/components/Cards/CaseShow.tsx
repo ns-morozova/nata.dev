@@ -74,14 +74,6 @@ const CaseShow: React.FC<CaseShowProps> = ({
                             <h3 className="mb-3 font-medium text-xl md:mb-5 md:text-3xl">{title}</h3>
                             <p className="text-xs md:text-base xl:w-4/5">{description}</p>
                         </div>
-
-                        {/* <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-700/50 to-transparent"></div> */}
-                        {/* <div
-                            className="absolute inset-0 w-full h-full bg-gradient-to-r to-transparent"
-                            style={{
-                                backgroundImage: `linear-gradient(to right, ${gradientColor}, transparent)`,
-                            }}
-                        ></div> */}
                     </div>
 
                     <div className="relative col-span-2 border border-white/20 rounded-3xl h-36 lg:h-1/2 overflow-hidden">
@@ -118,7 +110,7 @@ const CaseShow: React.FC<CaseShowProps> = ({
                             )}
                         </div> */}
 
-                        <div
+                        {/* <div
                             className={`absolute bottom-2 right-2 ${isEven ? 'lg:right-auto lg:left-2' : ''} flex items-center justify-center p-1 bg-white text-pink-500 border border-pink-500 rounded-full hover:text-pink-800 hover:border-pink-800 cursor-pointer transition-all duration-300`}
                             onClick={() => setIsExpanded(!isExpanded)}
                         >
@@ -127,9 +119,28 @@ const CaseShow: React.FC<CaseShowProps> = ({
                             ) : (
                                 <MdExpandMore className="size-6" />
                             )}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
+            </div>
+
+            <div
+                className="text-gray-300 text-sm md:text-base"
+                onClick={() => setIsExpanded(!isExpanded)}
+            >
+                {isExpanded ? (
+                    <div className="flex items-center gap-1 cursor-pointer">
+                        <MdExpandLess className="size-6" />
+                        <span>Скрыть детали проекта</span>
+                    </div>
+
+                ) : (
+                    <div className="flex items-center gap-1 cursor-pointer">
+                        <MdExpandMore className="size-6" />
+                        <span>Показать детали проекта</span>
+                    </div>
+
+                )}
             </div>
             
             {/* Раскрывающийся блок с деталями */}
