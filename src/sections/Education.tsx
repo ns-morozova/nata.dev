@@ -83,7 +83,7 @@ const Education: React.FC = () => {
                     </div>
                     <div className="flex gap-3">
                         <HiAcademicCap className="size-6" />
-                        <p className="text-sm md:text-base">Повышение квалификации: <br></br>Профильное обучение</p>
+                        <p className="text-sm md:text-base">Повышение квалификации: <br></br>Профильное обучение «Веб-разработчик»</p>
                     </div>
                 </div>
 

@@ -1,11 +1,13 @@
 import React from 'react';
 import { SectionTitle } from '../components/Ui';
-import { IoLogoCss3 } from "react-icons/io";
-import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoHtml5 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io";
-import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
+import { IoLogoCss3 } from "react-icons/io";
+import { BsFiletypeScss } from "react-icons/bs";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { RiReactjsLine } from "react-icons/ri";
+import { FaVuejs } from "react-icons/fa";
 import { SiI18Next } from "react-icons/si";
 
 import { IoGitMerge } from "react-icons/io5";
@@ -22,44 +24,47 @@ const Stack: React.FC = () => {
     const stack = [
         {
             name: 'HTML5',
-            description:
-                'Семантическая разметка',
+            description: 'Семантическая разметка',
             icon: IoLogoHtml5,
         },
         {
             name: 'JavaScript',
-            description:
-                'Динамика и интерактив',
+            description: 'Динамика и интерактив',
             icon: IoLogoJavascript,
         },
         {
+            name: 'TypeScript ',
+            description: 'Типизация для надежности',
+            icon: TbBrandTypescript,
+        },
+        {
             name: 'CSS3',
-            description:
-                'Адаптивность, Flexbox, Grid',
+            description: 'Адаптивность, Flexbox, Grid',
             icon: IoLogoCss3,
         },
         {
+            name: 'SCSS',
+            description: 'Модульные стили, переменные, миксины',
+            icon: BsFiletypeScss,
+        },
+        {
             name: 'Tailwind CSS',
-            description:
-                'Быстрая вёрстка через утилиты',
+            description: 'Быстрая вёрстка через утилиты',
             icon: RiTailwindCssFill,
         },
         {
             name: 'React',
-            description:
-                'Функциональные компоненты',
+            description: 'UI-библиотека',
             icon: RiReactjsLine,
         },
         {
-            name: 'TypeScript ',
-            description:
-                'Типизация для надежности',
-            icon: TbBrandTypescript,
+            name: 'Vue',
+            description: 'Прогрессивный фреймворк',
+            icon: FaVuejs,
         },
         {
             name: 'i18next ',
-            description:
-                'Интернационализация',
+            description: 'Интернационализация',
             icon: SiI18Next,
         },
     ]
