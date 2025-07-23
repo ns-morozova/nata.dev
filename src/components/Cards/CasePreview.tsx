@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface CasePreviewProps {
     image: string;
@@ -49,8 +50,8 @@ const CasePreview: React.FC<CasePreviewProps> = ({
                     <p className="mb-2 line-clamp-4 text-sm text-white/80 transition-all duration-500 group-hover:text-white/95">
                         {description}
                     </p>
-                    <a
-                        href={link}
+                    <Link
+                        to={link}
                         className="inline-flex items-center text-sm font-medium text-pink-400/90 transition-all duration-500 group-hover:text-pink-200"
                     >
                         <span className="relative z-10">
@@ -71,7 +72,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({
                                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                             />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </article>

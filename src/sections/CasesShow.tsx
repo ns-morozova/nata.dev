@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { SectionTitle } from '../components/Ui';
 import { CaseShow } from '../components/Cards';
 import { ShmoneDetails } from '../details';
@@ -7,6 +8,41 @@ import { ChicscoinDetails } from '../details';
 import { QuickmarkDetails } from '../details';
 
 const CasesShow: React.FC = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        const handleScrollToHash = () => {
+            const hash = location.hash;
+            if (hash) {
+                const element = document.querySelector(hash);
+                if (element) {
+                    // Определяем смещение в зависимости от ширины экрана
+                    const isMobile = window.innerWidth < 768;
+                    const offset = isMobile ? 100 : 300;
+
+                    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth',
+                    });
+                }
+            }
+        };
+
+        // Инициализация при монтировании компонента
+        handleScrollToHash();
+
+        // Добавляем обработчик изменения размера окна
+        window.addEventListener('resize', handleScrollToHash);
+
+        // Удаляем обработчик при размонтировании компонента
+        return () => {
+            window.removeEventListener('resize', handleScrollToHash);
+        };
+    }, [location]);
+
     const projects = [
         {
             video: '/nata.dev/video/shmoneloops.MP4',
@@ -52,17 +88,19 @@ const CasesShow: React.FC = () => {
                     <SectionTitle className="mb-10 md:mb-12">Мои работы</SectionTitle>
                     <div className="mb-10 flex flex-col gap-10 md:gap-16 md:mb-20">
                         {projects.map((project, index) => (
-                            <CaseShow
-                                isEven={index % 2 === 1}
-                                key={index}
-                                video={project.video}
-                                cover={project.cover}
-                                title={project.title}
-                                description={project.description}
-                                expandedContent={project.expandedContent}
-                                extraClasses={project.extraClasses}
-                                expandedBgColor={project.expandedBgColor}
-                            />
+                            <div id={`case-${index}`} key={index}>
+                                <CaseShow
+                                    isEven={index % 2 === 1}
+                                    // key={index}
+                                    video={project.video}
+                                    cover={project.cover}
+                                    title={project.title}
+                                    description={project.description}
+                                    expandedContent={project.expandedContent}
+                                    extraClasses={project.extraClasses}
+                                    expandedBgColor={project.expandedBgColor}
+                                />
+                            </div>
                         ))}
                     </div>
                     <p className="w-5/6 mx-auto text-center text-sm md:text-base lg:w-2/3 xl:w-1/2">
