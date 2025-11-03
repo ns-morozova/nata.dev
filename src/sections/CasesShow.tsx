@@ -4,6 +4,7 @@ import { SectionTitle } from '../components/Ui';
 import { CaseShow } from '../components/Cards';
 import { ShmoneDetails } from '../details';
 import { AcademyDetails } from '../details';
+import { TokenhoundDetails } from '../details';
 import { ChicscoinDetails } from '../details';
 import { QuickmarkDetails } from '../details';
 
@@ -60,6 +61,15 @@ const CasesShow: React.FC = () => {
             expandedContent: <AcademyDetails />,
             expandedBgColor: "rgba(241, 232, 223, 1)",
             extraClasses: "text-black bg-gradient-to-r from-[#D1A98C] to-[#EBC8A7]",
+        },
+        {
+            video: '/nata.dev/video/tokenhound.MP4',
+            cover: '/nata.dev/images/cover/tokenhound.png',
+            title: 'Tokenhound',
+            description: 'DEX-платформа для торговли криптоактивами',
+            expandedContent: <TokenhoundDetails />,
+            expandedBgColor: "rgba(27, 27, 31, 1)",
+            extraClasses: "text-white bg-gradient-to-r from-[#1B1B1F] to-[#27272A]",
         },
         {
             video: '/nata.dev/video/chicscoin.MP4',
