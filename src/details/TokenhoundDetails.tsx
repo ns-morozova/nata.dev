@@ -2,10 +2,11 @@ import React from 'react';
 import { RiReactjsLine } from 'react-icons/ri';
 import { TbBrandTypescript } from 'react-icons/tb';
 import { IoLogoCss3 } from 'react-icons/io';
-import { IoLogoGithub } from 'react-icons/io';
-import { RxFigmaLogo } from 'react-icons/rx';
+import { RiExchange2Fill } from "react-icons/ri";
 import { AiOutlineApi } from 'react-icons/ai';
 import { TbWebhook } from "react-icons/tb";
+import { IoLogoGithub } from 'react-icons/io';
+import { RxFigmaLogo } from 'react-icons/rx';
 
 const TokenhoundDetails = () => {
     return (
@@ -21,7 +22,10 @@ const TokenhoundDetails = () => {
                             <h5 className="mb-2 font-medium text-sm md:text-lg">Основные задачи:</h5>
                             <ul className="pl-4 list-disc flex flex-col gap-1 leading-5.5 text-xs sm:pl-3 md:text-base">
                                 <li>Реализация интерфейса по готовому дизайн-макету</li>
-                                <li>Интеграция с бэкендом через API</li>
+                                <li>Функционал смены темы оформления (dark / light)</li>
+                                <li>Клиент-серверное взаимодействие через REST API</li>
+                                <li>Динамическое отображение данных</li>
+                                <li>Совместная работа стандартной авторизации и авторизации криптокошелька</li>
                             </ul>
                         </div>
 
@@ -32,8 +36,9 @@ const TokenhoundDetails = () => {
                                     { icon: <RiReactjsLine />, text: 'Библиотека: React' },
                                     { icon: <TbBrandTypescript />, text: 'Язык программирования: TypeScript' },
                                     { icon: <IoLogoCss3 />, text: 'Стили: SCSS-модули' },
-                                    { icon: <AiOutlineApi />, text: 'Работа с данными: Fetch API' },
-                                    { icon: <TbWebhook />, text: 'Работа с состоянием: React Hooks' },
+                                    { icon: <AiOutlineApi />, text: 'Обмен данными: Axios' },
+                                    { icon: <RiExchange2Fill />, text: 'Глобальное состояние: MobX' },
+                                    { icon: <TbWebhook />, text: 'Состояние компонентов: React Hooks' },
                                     { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
                                     { icon: <RxFigmaLogo />, text: 'Работа с дизайн-макетом: Figma' },
                                 ].map(({ icon, text }, index) => (
@@ -50,6 +55,42 @@ const TokenhoundDetails = () => {
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+                    </div>
+
+                    <div className="hidden sm:block flex-shrink-0 h-80 md:h-64 lg:h-80 xl:h-96">
+                        <img
+                            alt="mockup"
+                            src="/nata.dev/images/cases/tokenhound_mob.png"
+                            className="relative h-full object-cover"
+                        />
+                    </div>
+                </div>
+
+                <div className="flex gap-2 sm:block lg:h-80 xl:h-96">
+                    <div className="sm:hidden w-1/2 flex-shrink-0">
+                        <img
+                            alt="mockup"
+                            src="/nata.dev/images/cases/tokenhound_mob.png"
+                            className="relative w-full object-cover"
+                        />
+                    </div>
+
+                    <div className="flex flex-col justify-between gap-2 sm:flex-row lg:flex-col lg:h-full">
+                        <div className="order-1 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-2 xl:w-60 overflow-hidden">
+                            <img
+                                alt=""
+                                src="/nata.dev/images/cases/tokenhound_ex2.png"
+                                className="relative w-full h-full object-cover"
+                            />
+                        </div>
+
+                        <div className="order-2 rounded-3xl h-full sm:h-48 sm:w-full md:h-52 lg:h-1/2 lg:w-40 lg:order-1 xl:w-60 overflow-hidden">
+                            <img
+                                alt=""
+                                src="/nata.dev/images/cases/tokenhound_ex1.png"
+                                className="relative w-full h-full object-cover"
+                            />
                         </div>
                     </div>
                 </div>

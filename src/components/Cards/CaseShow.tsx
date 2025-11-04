@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { MdExpandMore } from "react-icons/md";
 import { MdExpandLess } from "react-icons/md";
 
+export type Media =
+  | { type: 'video'; src: string }
+  | { type: 'image'; src: string };
+
 interface CaseShowProps {
-    video: string;
+    media: Media;               // <-- было: video: string
     cover?: string;
     title: string;
     description: string;
@@ -14,7 +18,7 @@ interface CaseShowProps {
 }
 
 const CaseShow: React.FC<CaseShowProps> = ({
-    video,
+    media,
     cover,
     title,
     description,
@@ -23,27 +27,25 @@ const CaseShow: React.FC<CaseShowProps> = ({
     extraClasses = "",
     expandedBgColor = "rgba(27, 33, 45, 1)",
 }) => {
-    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+    const [isMediaLoaded, setIsMediaLoaded] = useState(false);
     const [hasError, setHasError] = useState(false);
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const handleVideoLoad = () => {
-        setIsVideoLoaded(true);
-    };
-
-    const handleVideoError = () => {
+    const handleMediaLoad = () => setIsMediaLoaded(true);
+    const handleMediaError = () => {
         setHasError(true);
-        setIsVideoLoaded(false);
+        setIsMediaLoaded(false);
     };
 
-    const showPreview = video && !isVideoLoaded && !hasError;
+    const showPreview = media.type === 'video' && !isMediaLoaded && !hasError;
 
     return (
         <article className="flex flex-col gap-3 lg:gap-4">
-            <div className="flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-x-4">
+            {/* <div className="flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-x-4"> */}
+            <div className="flex flex-col gap-3 lg:flex-row lg:gap-4">
                 {/* Блок с демо */}
                 <div
-                    className={`relative ${isEven ? 'lg:order-2' : 'lg:order-1'}`}
+                    className={`relative lg:w-1/2 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}
                 >
                     <div className="h-60 border border-white/20 rounded-3xl sm:h-72 md:h-96 lg:h-[500px] overflow-hidden">
                         <img
@@ -61,13 +63,12 @@ const CaseShow: React.FC<CaseShowProps> = ({
                             filter: 'blur(170px)',
                             willChange: 'transform, opacity',
                         }}
-                    >
-                    </div>
+                    />
                 </div>
 
                 {/* Блок инфо */}
                 <div
-                    className={`grid grid-cols-5 gap-3 lg:flex lg:flex-col ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
+                    className={`grid grid-cols-5 gap-3 lg:lg:w-1/2 lg:flex lg:flex-col lg:h-[500px] ${isEven ? 'lg:order-1' : 'lg:order-2'}`}
                 >
                     <div className={`relative col-span-3 rounded-3xl px-4 py-3 md:px-6 md:py-5 lg:h-1/2 overflow-hidden ${extraClasses}`}>
                         <div className="relative z-10">
@@ -77,49 +78,36 @@ const CaseShow: React.FC<CaseShowProps> = ({
                     </div>
 
                     <div className="relative col-span-2 border border-white/20 rounded-3xl h-36 lg:h-1/2 overflow-hidden">
-                        {showPreview && (
+                        {showPreview && cover && (
                             <img
                                 src={cover}
                                 alt={title}
                                 className="w-full h-full object-cover object-[center_3%]"
+                                onLoad={handleMediaLoad} // чтобы быстро убрать прелоад, если cover подгрузился
                             />
                         )}
 
-                        {video && (
+                        {media.type === 'video' ? (
                             <video
-                                src={video}
+                                src={media.src}
                                 autoPlay
                                 loop
                                 muted
                                 playsInline
-                                className={`w-full h-full object-cover object-[center_5%] ${isVideoLoaded ? 'block' : 'hidden'}`}
+                                className={`w-full h-full object-cover object-[center_5%] ${isMediaLoaded ? 'block' : 'hidden'}`}
                                 aria-label={title}
-                                onLoadedData={handleVideoLoad}
-                                onError={handleVideoError}
+                                onLoadedData={handleMediaLoad}
+                                onError={handleMediaError}
+                            />
+                        ) : (
+                            <img
+                                src={media.src}
+                                alt={title}
+                                className="w-full h-full object-cover object-[center_5%]"
+                                onLoad={handleMediaLoad}
+                                onError={handleMediaError}
                             />
                         )}
-
-                        {/* <div
-                            className={`absolute bottom-2 right-2 ${isEven ? 'lg:right-auto lg:left-2' : ''} flex items-center justify-center p-1 border border-white/40 text-white/60 rounded-full hover:border-white/50 hover:text-white/70 cursor-pointer transition-all duration-300`}
-                            onClick={() => setIsExpanded(!isExpanded)}
-                        >
-                            {isExpanded ? (
-                                <MdExpandLess className="size-6" />
-                            ) : (
-                                <MdExpandMore className="size-6" />
-                            )}
-                        </div> */}
-
-                        {/* <div
-                            className={`absolute bottom-2 right-2 ${isEven ? 'lg:right-auto lg:left-2' : ''} flex items-center justify-center p-1 bg-white text-pink-500 border border-pink-500 rounded-full hover:text-pink-800 hover:border-pink-800 cursor-pointer transition-all duration-300`}
-                            onClick={() => setIsExpanded(!isExpanded)}
-                        >
-                            {isExpanded ? (
-                                <MdExpandLess className="size-6" />
-                            ) : (
-                                <MdExpandMore className="size-6" />
-                            )}
-                        </div> */}
                     </div>
                 </div>
             </div>

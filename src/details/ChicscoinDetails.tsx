@@ -2,9 +2,9 @@ import React from 'react';
 import { RiReactjsLine } from 'react-icons/ri';
 import { TbBrandTypescript } from 'react-icons/tb';
 import { RiTailwindCssFill } from "react-icons/ri";
-import { IoLogoGithub } from 'react-icons/io';
 import { TbWebhook } from "react-icons/tb";
 import { SiI18Next } from "react-icons/si";
+import { IoLogoGithub } from 'react-icons/io';
 
 const ChicscoinDetails = () => {
     return (
@@ -32,7 +32,7 @@ const ChicscoinDetails = () => {
                                     { icon: <RiReactjsLine />, text: 'Библиотека: React' },
                                     { icon: <TbBrandTypescript />, text: 'Язык программирования: TypeScript' },
                                     { icon: <RiTailwindCssFill />, text: 'Стили: Tailwind CSS' },
-                                    { icon: <TbWebhook />, text: 'Работа с состоянием: React Hooks' },
+                                    { icon: <TbWebhook />, text: 'Состояние компонентов: React Hooks' },
                                     { icon: <SiI18Next />, text: 'Интернационализация: i18next' },
                                     { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
                                 ].map(({ icon, text }, index) => (

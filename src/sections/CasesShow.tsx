@@ -7,6 +7,17 @@ import { AcademyDetails } from '../details';
 import { TokenhoundDetails } from '../details';
 import { ChicscoinDetails } from '../details';
 import { QuickmarkDetails } from '../details';
+import type { Media } from '../components/Cards/CaseShow';
+
+type ProjectItem = {
+    media: Media;
+    cover?: string;
+    title: string;
+    description: string;
+    expandedContent?: React.ReactNode;
+    extraClasses?: string;
+    expandedBgColor?: string;
+  };
 
 const CasesShow: React.FC = () => {
     const location = useLocation();
@@ -44,9 +55,10 @@ const CasesShow: React.FC = () => {
         };
     }, [location]);
 
-    const projects = [
+    const projects: ProjectItem[] = [
         {
-            video: '/nata.dev/video/shmoneloops.MP4',
+            // video: '/nata.dev/video/shmoneloops.MP4',
+            media: { type: 'video', src: '/nata.dev/video/shmoneloops.MP4' },
             cover: '/nata.dev/images/cover/shmoneloops.png',
             title: 'ShmoneLoops',
             description: 'Современный интерактивный лендинг с анимациями и возможностью записи в лист ожидания',
@@ -54,7 +66,8 @@ const CasesShow: React.FC = () => {
             extraClasses: "bg-gradient-to-r from-[#141620] to-[#415674]",
         },
         {
-            video: '/nata.dev/video/academy.MP4',
+            // video: '/nata.dev/video/academy.MP4',
+            media: { type: 'video', src: '/nata.dev/video/academy.MP4' },
             cover: '/nata.dev/images/cover/academy.png',
             title: 'Beauty Academy',
             description: 'Многостраничный сайт для продажи курсов и обучений в сфере бьюти-индустрии',
@@ -63,31 +76,34 @@ const CasesShow: React.FC = () => {
             extraClasses: "text-black bg-gradient-to-r from-[#D1A98C] to-[#EBC8A7]",
         },
         {
-            video: '/nata.dev/video/tokenhound.MP4',
+            // video: '/nata.dev/video/tokenhound.MP4',
+            media: { type: 'image', src: '/nata.dev/images/cover/tokenhound_ex.png' },
             cover: '/nata.dev/images/cover/tokenhound.png',
-            title: 'Tokenhound',
+            title: 'TokenHound',
             description: 'DEX-платформа для торговли криптоактивами',
             expandedContent: <TokenhoundDetails />,
             expandedBgColor: "rgba(27, 27, 31, 1)",
             extraClasses: "text-white bg-gradient-to-r from-[#1B1B1F] to-[#27272A]",
         },
         {
-            video: '/nata.dev/video/chicscoin.MP4',
+            // video: '/nata.dev/video/quickmark.MP4',
+            media: { type: 'video', src: '/nata.dev/video/quickmark.MP4' },
+            cover: '/nata.dev/images/cover/quickmark.png',
+            title: 'Quickmark',
+            description: 'Сервис маркировки товаров с лендингом и функциональной админ-панелью',
+            expandedContent: <QuickmarkDetails />,
+            expandedBgColor: "rgba(255, 226, 168, 1)",
+            extraClasses: "text-black bg-gradient-to-r from-[#fe985d] to-[#ffea94]",
+        },
+        {
+            // video: '/nata.dev/video/chicscoin.MP4',
+            media: { type: 'video', src: '/nata.dev/video/chicscoin.MP4' },
             cover: '/nata.dev/images/cover/chicscoin.png',
             title: 'Chicscoin',
             description: 'Мультиязычный лендинг с самостоятельно разработанным дизайном и базовой анимацией',
             expandedContent: <ChicscoinDetails />,
             expandedBgColor: "rgba(38, 38, 38, 0.8)",
             extraClasses: "bg-gradient-to-r from-[#AF0092] to-teal-900",
-        },
-        {
-            video: '/nata.dev/video/quickmark.MP4',
-            cover: '/nata.dev/images/cover/quickmark.png',
-            title: 'Quickmark',
-            description: 'Сервис маркировки товаров с лендингом и функциональной админ-панелью',
-            expandedContent: <QuickmarkDetails />,
-            expandedBgColor: "rgba(255, 210, 132, 1)",
-            extraClasses: "text-black bg-gradient-to-r from-[#fe985d] to-[#ffea94]",
         },
     ];
 
@@ -102,7 +118,8 @@ const CasesShow: React.FC = () => {
                                 <CaseShow
                                     isEven={index % 2 === 1}
                                     // key={index}
-                                    video={project.video}
+                                    // video={project.video}
+                                    media={project.media}
                                     cover={project.cover}
                                     title={project.title}
                                     description={project.description}

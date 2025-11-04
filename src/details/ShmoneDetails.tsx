@@ -24,7 +24,7 @@ const ShmoneDetails = () => {
                             <ul className="pl-4 list-disc flex flex-col gap-1 leading-5.5 text-xs sm:pl-3 md:text-base">
                                 <li>Реализация интерфейса по готовому дизайн-макету</li>
                                 <li>Создание CSS-анимаций</li>
-                                <li>Интеграция с бэкендом через API для отправки данных</li>
+                                <li>Клиент-серверное взаимодействие через REST API</li>
                             </ul>
                         </div>
 
@@ -35,8 +35,8 @@ const ShmoneDetails = () => {
                                     { icon: <RiReactjsLine />, text: 'Библиотека: React' },
                                     { icon: <TbBrandTypescript />, text: 'Язык программирования: TypeScript' },
                                     { icon: <IoLogoCss3 />, text: 'Стили: CSS-модули' },
-                                    { icon: <AiOutlineApi />, text: 'Работа с данными: Fetch API' },
-                                    { icon: <TbWebhook />, text: 'Работа с состоянием: React Hooks' },
+                                    { icon: <AiOutlineApi />, text: 'Обмен данными: Fetch API' },
+                                    { icon: <TbWebhook />, text: 'Состояние компонентов: React Hooks' },
                                     { icon: <MdOutlineAnimation />, text: 'Анимации: CSS-анимации' },
                                     { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
                                     { icon: <RxFigmaLogo />, text: 'Работа с дизайн-макетом: Figma' },
