@@ -7,8 +7,8 @@ export type Media =
   | { type: 'image'; src: string };
 
 interface CaseShowProps {
-    media: Media;               // <-- было: video: string
-    cover?: string;
+    media: Media;
+    mainImage: string;
     title: string;
     description: string;
     isEven: boolean;
@@ -17,9 +17,9 @@ interface CaseShowProps {
     expandedBgColor?: string;
 }
 
-const CaseShow: React.FC<CaseShowProps> = ({
+const CaseWebShow: React.FC<CaseShowProps> = ({
     media,
-    cover,
+    mainImage,
     title,
     description,
     isEven,
@@ -49,7 +49,7 @@ const CaseShow: React.FC<CaseShowProps> = ({
                 >
                     <div className="h-60 border border-white/20 rounded-3xl sm:h-72 md:h-96 lg:h-[500px] overflow-hidden">
                         <img
-                            src={cover}
+                            src={mainImage}
                             alt={title}
                             className="w-full h-full object-cover object-[center_3%]"
                         />
@@ -78,9 +78,9 @@ const CaseShow: React.FC<CaseShowProps> = ({
                     </div>
 
                     <div className="relative col-span-2 border border-white/20 rounded-3xl h-36 lg:h-1/2 overflow-hidden">
-                        {showPreview && cover && (
+                        {showPreview && mainImage && (
                             <img
-                                src={cover}
+                                src={mainImage}
                                 alt={title}
                                 className="w-full h-full object-cover object-[center_3%]"
                                 onLoad={handleMediaLoad} // чтобы быстро убрать прелоад, если cover подгрузился
@@ -148,4 +148,4 @@ const CaseShow: React.FC<CaseShowProps> = ({
     );
 };
 
-export default CaseShow;
+export default CaseWebShow;

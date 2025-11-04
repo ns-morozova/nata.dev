@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SectionTitle } from '../components/Ui';
-import { CaseShow } from '../components/Cards';
+import { CaseWebShow } from '../components/Cards';
+import { CaseMobShow } from '../components/Cards';
 import { ShmoneDetails } from '../details';
 import { AcademyDetails } from '../details';
 import { TokenhoundDetails } from '../details';
-import { ChicscoinDetails } from '../details';
 import { QuickmarkDetails } from '../details';
-import type { Media } from '../components/Cards/CaseShow';
+import { ChicscoinDetails } from '../details';
+import { NeighborDetails } from '../details';
+import type { Media } from '../components/Cards/CaseWebShow';
 
-type ProjectItem = {
+type ProjectWebItem = {
     media: Media;
-    cover?: string;
+    mainImage: string;
     title: string;
     description: string;
     expandedContent?: React.ReactNode;
@@ -55,20 +57,18 @@ const CasesShow: React.FC = () => {
         };
     }, [location]);
 
-    const projects: ProjectItem[] = [
+    const projectsWeb: ProjectWebItem[] = [
         {
-            // video: '/nata.dev/video/shmoneloops.MP4',
             media: { type: 'video', src: '/nata.dev/video/shmoneloops.MP4' },
-            cover: '/nata.dev/images/cover/shmoneloops.png',
+            mainImage: '/nata.dev/images/cover/shmoneloops.png',
             title: 'ShmoneLoops',
             description: 'Современный интерактивный лендинг с анимациями и возможностью записи в лист ожидания',
             expandedContent: <ShmoneDetails />,
             extraClasses: "bg-gradient-to-r from-[#141620] to-[#415674]",
         },
         {
-            // video: '/nata.dev/video/academy.MP4',
             media: { type: 'video', src: '/nata.dev/video/academy.MP4' },
-            cover: '/nata.dev/images/cover/academy.png',
+            mainImage: '/nata.dev/images/cover/academy.png',
             title: 'Beauty Academy',
             description: 'Многостраничный сайт для продажи курсов и обучений в сфере бьюти-индустрии',
             expandedContent: <AcademyDetails />,
@@ -76,19 +76,17 @@ const CasesShow: React.FC = () => {
             extraClasses: "text-black bg-gradient-to-r from-[#D1A98C] to-[#EBC8A7]",
         },
         {
-            // video: '/nata.dev/video/tokenhound.MP4',
             media: { type: 'image', src: '/nata.dev/images/cover/tokenhound_ex.png' },
-            cover: '/nata.dev/images/cover/tokenhound.png',
+            mainImage: '/nata.dev/images/cover/tokenhound.png',
             title: 'TokenHound',
             description: 'DEX-платформа для торговли криптоактивами',
             expandedContent: <TokenhoundDetails />,
             expandedBgColor: "rgba(27, 27, 31, 1)",
-            extraClasses: "text-white bg-gradient-to-r from-[#1B1B1F] to-[#27272A]",
+            extraClasses: "bg-gradient-to-r from-[#1B1B1F] to-[#27272A]",
         },
         {
-            // video: '/nata.dev/video/quickmark.MP4',
             media: { type: 'video', src: '/nata.dev/video/quickmark.MP4' },
-            cover: '/nata.dev/images/cover/quickmark.png',
+            mainImage: '/nata.dev/images/cover/quickmark.png',
             title: 'Quickmark',
             description: 'Сервис маркировки товаров с лендингом и функциональной админ-панелью',
             expandedContent: <QuickmarkDetails />,
@@ -96,14 +94,26 @@ const CasesShow: React.FC = () => {
             extraClasses: "text-black bg-gradient-to-r from-[#fe985d] to-[#ffea94]",
         },
         {
-            // video: '/nata.dev/video/chicscoin.MP4',
             media: { type: 'video', src: '/nata.dev/video/chicscoin.MP4' },
-            cover: '/nata.dev/images/cover/chicscoin.png',
+            mainImage: '/nata.dev/images/cover/chicscoin.png',
             title: 'Chicscoin',
             description: 'Мультиязычный лендинг с самостоятельно разработанным дизайном и базовой анимацией',
             expandedContent: <ChicscoinDetails />,
             expandedBgColor: "rgba(38, 38, 38, 0.8)",
             extraClasses: "bg-gradient-to-r from-[#AF0092] to-teal-900",
+        },
+    ];
+
+    const projectMob = [
+        {
+            mainImage: '/nata.dev/images/cases/neighbor_ex.png',
+            extraImage1: '/nata.dev/images/cases/neighbor_ex2.png',
+            extraImage2: '/nata.dev/images/cases/neighbor_ex3.png',
+            title: 'Мой товарищ',
+            description: 'Мобильное приложение (Telegram Mini App) для поиска жилья в стиле сайта знакомств',
+            expandedContent: <NeighborDetails />,
+            expandedBgColor: "rgba(255, 232, 174, 1)",
+            extraClasses: "text-black bg-[#FFE8AE]",
         },
     ];
 
@@ -113,14 +123,12 @@ const CasesShow: React.FC = () => {
                 <div className="relative z-10">
                     <SectionTitle className="mb-10 md:mb-12">Мои работы</SectionTitle>
                     <div className="mb-10 flex flex-col gap-10 md:gap-16 md:mb-20">
-                        {projects.map((project, index) => (
+                        {projectsWeb.map((project, index) => (
                             <div id={`case-${index}`} key={index}>
-                                <CaseShow
+                                <CaseWebShow
                                     isEven={index % 2 === 1}
-                                    // key={index}
-                                    // video={project.video}
                                     media={project.media}
-                                    cover={project.cover}
+                                    mainImage={project.mainImage}
                                     title={project.title}
                                     description={project.description}
                                     expandedContent={project.expandedContent}
@@ -130,6 +138,25 @@ const CasesShow: React.FC = () => {
                             </div>
                         ))}
                     </div>
+
+                    <div className="mb-10 flex flex-col gap-10 md:gap-16 md:mb-20">
+                        {projectMob.map((project, index) => (
+                            <div id={`case-${index}`} key={index}>
+                                <CaseMobShow
+                                    // isEven={index % 2 === 1}
+                                    mainImage={project.mainImage}
+                                    extraImage1={project.extraImage1}
+                                    extraImage2={project.extraImage2}
+                                    title={project.title}
+                                    description={project.description}
+                                    expandedContent={project.expandedContent}
+                                    extraClasses={project.extraClasses}
+                                    expandedBgColor={project.expandedBgColor}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
                     <p className="w-5/6 mx-auto text-center text-sm md:text-base lg:w-2/3 xl:w-1/2">
                         Часть проектов находится под NDA и не может быть размещена в портфолио. Свяжитесь со мной для уточнения деталей вашего проекта.
                     </p>
