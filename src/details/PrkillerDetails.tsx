@@ -2,17 +2,19 @@ import React from 'react';
 import { RiReactjsLine } from 'react-icons/ri';
 import { TbBrandTypescript } from 'react-icons/tb';
 import { IoLogoCss3 } from 'react-icons/io';
+import { RiExchange2Fill } from "react-icons/ri";
+import { AiOutlineApi } from 'react-icons/ai';
 import { TbWebhook } from "react-icons/tb";
 import { IoLogoGithub } from 'react-icons/io';
 import { RxFigmaLogo } from 'react-icons/rx';
 
-const NeighborDetails = () => {
+const PrkillerDetails = () => {
     return (
-        <div className="text-black">
+        <div className="text-white">
             <h4 className="mb-3 font-semibold uppercase text-base md:text-xl md:mb-5">
                 Детали проекта
             </h4>
-            
+
             <div className="flex flex-col gap-6 lg:flex-row md:gap-7 lg:justify-between lg:gap-6">
                 <div className="flex flex-col gap-3 sm:flex-row sm:justify-between lg:w-full">
                     <div className="flex flex-col gap-3 md:flex-row-reverse md:gap-7">
@@ -20,8 +22,9 @@ const NeighborDetails = () => {
                             <h5 className="mb-2 font-medium text-sm md:text-lg">Основные задачи:</h5>
                             <ul className="pl-4 list-disc flex flex-col gap-1 leading-5.5 text-xs sm:pl-3 md:text-base">
                                 <li>Реализация интерфейса по готовому дизайн-макету</li>
-                                <li>Функционал смены темы оформления (dark / light)</li>
                                 <li>Клиент-серверное взаимодействие через REST API</li>
+                                <li>Динамическое отображение данных</li>
+                                <li>Регистрация и права для разных пользовательских ролей</li>
                             </ul>
                         </div>
 
@@ -32,6 +35,8 @@ const NeighborDetails = () => {
                                     { icon: <RiReactjsLine />, text: 'Библиотека: React' },
                                     { icon: <TbBrandTypescript />, text: 'Язык программирования: TypeScript' },
                                     { icon: <IoLogoCss3 />, text: 'Стили: CSS-модули' },
+                                    { icon: <AiOutlineApi />, text: 'Обмен данными: Fetch API' },
+                                    { icon: <RiExchange2Fill />, text: 'Глобальное состояние: Redux' },
                                     { icon: <TbWebhook />, text: 'Состояние компонентов: React Hooks' },
                                     { icon: <IoLogoGithub />, text: 'Совместная разработка: GitHub' },
                                     { icon: <RxFigmaLogo />, text: 'Работа с дизайн-макетом: Figma' },
@@ -40,7 +45,7 @@ const NeighborDetails = () => {
                                         key={index}
                                         className="flex items-center gap-2 md:gap-2.5"
                                     >
-                                        <div className="flex flex-shrink-0 size-6 items-center justify-center rounded-lg bg-gradient-to-r from-pink-900 to-pink-600 md:size-7 overflow-hidden">
+                                        <div className="flex flex-shrink-0 size-6 items-center justify-center rounded-lg bg-gradient-to-r from-[#9E3D28] to-[#D9583D] md:size-7 overflow-hidden">
                                             {React.cloneElement(icon, {
                                                 className: 'text-white size-4 md:size-5',
                                             })}
@@ -57,4 +62,4 @@ const NeighborDetails = () => {
     );
 };
 
-export default NeighborDetails;
+export default PrkillerDetails;

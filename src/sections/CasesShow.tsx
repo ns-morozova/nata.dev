@@ -7,6 +7,7 @@ import { ShmoneDetails } from '../details';
 import { AcademyDetails } from '../details';
 import { TokenhoundDetails } from '../details';
 import { QuickmarkDetails } from '../details';
+import { PrkillerDetails } from '../details';
 import { ChicscoinDetails } from '../details';
 import { NeighborDetails } from '../details';
 import type { Media } from '../components/Cards/CaseWebShow';
@@ -92,6 +93,15 @@ const CasesShow: React.FC = () => {
             expandedContent: <QuickmarkDetails />,
             expandedBgColor: "rgba(255, 226, 168, 1)",
             extraClasses: "text-black bg-gradient-to-r from-[#fe985d] to-[#ffea94]",
+        },
+        {
+            media: { type: 'image', src: '/nata.dev/images/cover/prkiller_exx.png' },
+            mainImage: '/nata.dev/images/cover/prkiller.png',
+            title: 'PrKiller',
+            description: 'Медиа-платформа',
+            expandedContent: <PrkillerDetails />,
+            expandedBgColor: "rgba(23, 22, 24, 1)",
+            extraClasses: "bg-gradient-to-r from-[#171618] to-[#C04B33]",
         },
         {
             media: { type: 'video', src: '/nata.dev/video/chicscoin.MP4' },

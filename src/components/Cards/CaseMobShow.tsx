@@ -43,7 +43,7 @@ const CaseMobShow: React.FC<CaseMobShowProps> = ({
             </div>
 
             <div
-                className="text-gray-300 text-sm md:text-base"
+                className="w-max text-gray-300 text-sm md:text-base"
                 onClick={() => setIsExpanded(!isExpanded)}
             >
                 {isExpanded ? (
