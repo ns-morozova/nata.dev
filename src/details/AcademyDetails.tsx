@@ -40,7 +40,7 @@ const AcademyDetails = () => {
                                         key={index}
                                         className="flex items-center gap-2 md:gap-2.5"
                                     >
-                                        <div className="flex flex-shrink-0 size-6 items-center justify-center rounded-lg bg-gradient-to-r from-pink-900 to-pink-600 md:size-7 overflow-hidden">
+                                        <div className="flex flex-shrink-0 size-6 items-center justify-center rounded-lg bg-gradient-to-r from-[#162b1f] to-[#79b289] md:size-7 overflow-hidden">
                                             {React.cloneElement(icon, {
                                                 className: 'text-white size-4 md:size-5',
                                             })}

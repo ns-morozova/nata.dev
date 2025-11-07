@@ -46,7 +46,7 @@ const TokenhoundDetails = () => {
                                         key={index}
                                         className="flex items-center gap-2 md:gap-2.5"
                                     >
-                                        <div className="flex flex-shrink-0 size-6 items-center justify-center rounded-lg bg-gradient-to-r from-pink-900 to-pink-600 md:size-7 overflow-hidden">
+                                        <div className="flex flex-shrink-0 size-6 items-center justify-center rounded-lg bg-gradient-to-r from-[#3A0078] to-[#864eff] md:size-7 overflow-hidden">
                                             {React.cloneElement(icon, {
                                                 className: 'text-white size-4 md:size-5',
                                             })}

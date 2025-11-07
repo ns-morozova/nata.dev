@@ -98,7 +98,7 @@ const CasesShow: React.FC = () => {
             media: { type: 'image', src: '/nata.dev/images/cover/prkiller_exx.png' },
             mainImage: '/nata.dev/images/cover/prkiller.png',
             title: 'PrKiller',
-            description: 'Медиа-платформа',
+            description: 'Медиа-платформа с функционалом для артистов и медиа',
             expandedContent: <PrkillerDetails />,
             expandedBgColor: "rgba(23, 22, 24, 1)",
             extraClasses: "bg-gradient-to-r from-[#171618] to-[#C04B33]",
