@@ -153,7 +153,7 @@ const CasesShow: React.FC = () => {
                         {projectMob.map((project, index) => (
                             <div id={`case-${index}`} key={index}>
                                 <CaseMobShow
-                                    // isEven={index % 2 === 1}
+                                    isEven={index % 2 === 1}
                                     mainImage={project.mainImage}
                                     extraImage1={project.extraImage1}
                                     extraImage2={project.extraImage2}

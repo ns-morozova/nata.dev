@@ -8,7 +8,7 @@ interface CaseMobShowProps {
     extraImage2: string;
     title: string;
     description: string;
-    // isEven: boolean;
+    isEven: boolean;
     expandedContent?: React.ReactNode;
     extraClasses?: string;
     expandedBgColor?: string;
@@ -20,7 +20,7 @@ const CaseMobShow: React.FC<CaseMobShowProps> = ({
     extraImage2,
     title,
     description,
-    // isEven,
+    isEven,
     expandedContent,
     extraClasses = "",
     expandedBgColor = "rgba(27, 33, 45, 1)",
@@ -30,12 +30,12 @@ const CaseMobShow: React.FC<CaseMobShowProps> = ({
     return (
         <article className="flex flex-col gap-3 lg:gap-4">
             <div className="flex flex-col gap-3 lg:flex-row lg:gap-4">
-                <div className={`rounded-3xl px-4 pt-3 pb-5 md:px-6 md:py-5 lg:w-1/2 overflow-hidden ${extraClasses}`}>
+                <div className={`rounded-3xl px-4 pt-3 pb-5 md:px-6 md:py-5 lg:w-1/2 overflow-hidden ${isEven ? 'lg:order-1' : 'lg:order-2'} ${extraClasses}`}>
                     <h3 className="mb-3 font-medium text-xl md:mb-5 md:text-3xl">{title}</h3>
                     <p className="text-xs md:text-base xl:w-4/5">{description}</p>
                 </div>
 
-                <div className="flex lg:w-1/2">
+                <div className={`flex lg:w-1/2 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
                     <img src={mainImage} alt={title} className="w-1/3" />
                     <img src={extraImage1} alt={title} className="w-1/3" />
                     <img src={extraImage2} alt={title} className="w-1/3" />

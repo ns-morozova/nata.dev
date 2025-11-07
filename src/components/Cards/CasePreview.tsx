@@ -42,7 +42,7 @@ const CasePreview: React.FC<CasePreviewProps> = ({
             </div>
 
             {/* Инфо */}
-            <div className="absolute bottom-0 w-full h-max bg-gray-900/70">
+            <div className="absolute bottom-0 w-full h-max bg-black/70">
                 <div className="px-4 py-3 md:px-6 md:py-4">
                     <h3 className="mb-2 text-xl font-bold text-white opacity-90 transition-all duration-500 group-hover:opacity-100 group-hover:text-cyan-50">
                         {title}
@@ -52,11 +52,11 @@ const CasePreview: React.FC<CasePreviewProps> = ({
                     </p>
                     <Link
                         to={link}
-                        className="inline-flex items-center text-sm font-medium text-pink-400/90 transition-all duration-500 group-hover:text-pink-200"
+                        className="inline-flex items-center text-sm font-medium transition-all duration-500 group-hover:text-white"
                     >
                         <span className="relative z-10">
                             Подробнее о проекте
-                            <span className="absolute bottom-0 left-0 h-px w-0 bg-pink-200 transition-all duration-500 group-hover:w-full"></span>
+                            <span className="absolute bottom-0 left-0 h-px w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
                         </span>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
